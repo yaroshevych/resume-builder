@@ -1,0 +1,1 @@
+Resumebuilder.ApplicationAdapter = DS.FixtureAdapter;
