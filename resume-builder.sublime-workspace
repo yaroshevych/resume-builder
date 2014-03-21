@@ -1,0 +1,2273 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"setRe",
+				"setReadOnly"
+			],
+			[
+				"set",
+				"setReadonly"
+			],
+			[
+				"co",
+				"completed"
+			],
+			[
+				"fi",
+				"fields"
+			],
+			[
+				"open",
+				"openDialog"
+			],
+			[
+				"che",
+				"checkbox"
+			],
+			[
+				"ca",
+				"calendarStore"
+			],
+			[
+				"cale",
+				"calendarLegend"
+			],
+			[
+				"calendar",
+				"calendarId"
+			],
+			[
+				"Cale",
+				"CalendarId"
+			],
+			[
+				"color",
+				"colorId"
+			],
+			[
+				"ini",
+				"initIconHandlers"
+			],
+			[
+				"load",
+				"loadDoctors"
+			],
+			[
+				"white",
+				"white-space"
+			],
+			[
+				"gets",
+				"getStateName"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"sce",
+				"scheduled"
+			],
+			[
+				"callba",
+				"menu-callbackState-confirmed"
+			],
+			[
+				"call",
+				"menu-callbackState-confirmed"
+			],
+			[
+				"targ",
+				"targetState"
+			],
+			[
+				"uplo",
+				"showUploadError"
+			],
+			[
+				"show",
+				"showError"
+			],
+			[
+				"upl",
+				"uploadDragFile"
+			],
+			[
+				"get",
+				"getEl"
+			],
+			[
+				"sel",
+				"self"
+			],
+			[
+				"pa",
+				"patientId"
+			],
+			[
+				"ima",
+				"imageName"
+			],
+			[
+				"for",
+				"formData"
+			],
+			[
+				"dra",
+				"dragLeaveTimer"
+			],
+			[
+				"on",
+				"ondragend"
+			],
+			[
+				"form",
+				"formData"
+			],
+			[
+				"image",
+				"imageWigth"
+			],
+			[
+				"view",
+				"viewportProportions"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"dataw",
+				"dataView"
+			],
+			[
+				"getSele",
+				"getSelectionModel"
+			],
+			[
+				"sele",
+				"selectedRecord"
+			],
+			[
+				"con",
+				"controlListeners"
+			],
+			[
+				"ie",
+				"items"
+			],
+			[
+				"Ser",
+				"Service"
+			],
+			[
+				"DataViw",
+				"dataview"
+			],
+			[
+				"pat",
+				"patientId"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"patienti",
+				"patientimages"
+			],
+			[
+				"app",
+				"appointment"
+			],
+			[
+				"appo",
+				"appointments"
+			],
+			[
+				"erro",
+				"errorHandler"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"serv",
+				"servicesGrid"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"pla",
+				"plans"
+			],
+			[
+				"upda",
+				"updateAppointments"
+			],
+			[
+				"send",
+				"sendResult"
+			],
+			[
+				"ope",
+				"openAmount"
+			],
+			[
+				"Seri",
+				"Service"
+			],
+			[
+				"Tra",
+				"AllocatedTransactionId"
+			],
+			[
+				"ser",
+				"services"
+			],
+			[
+				"update",
+				"updateAppointments"
+			],
+			[
+				"too",
+				"tooltip"
+			],
+			[
+				"edit",
+				"editMenu"
+			],
+			[
+				"comple",
+				"completePlan"
+			],
+			[
+				"geta",
+				"getSelectedPlanId"
+			],
+			[
+				"sa",
+				"Saving"
+			],
+			[
+				"plan",
+				"planId"
+			],
+			[
+				"disa",
+				"disableToolbar"
+			],
+			[
+				"sc",
+				"scope"
+			],
+			[
+				"filter",
+				"filterByAppointment"
+			],
+			[
+				"getA",
+				"getActiveTab"
+			],
+			[
+				"de",
+				"deletePlan"
+			],
+			[
+				"plans",
+				"plans"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"patie",
+				"patientId"
+			],
+			[
+				"create",
+				"createStore"
+			],
+			[
+				"tra",
+				"transactionItems"
+			],
+			[
+				"updae",
+				"updateNextAppointment"
+			],
+			[
+				"can",
+				"canceled"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"sche",
+				"scheduled"
+			],
+			[
+				"service",
+				"serviced"
+			],
+			[
+				"serviced",
+				"Serviced"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"Visi",
+				"VisitId"
+			],
+			[
+				"pay",
+				"paymentType"
+			],
+			[
+				"payme",
+				"paymentType"
+			],
+			[
+				"su",
+				"submitPayment"
+			],
+			[
+				"dis",
+				"discount"
+			],
+			[
+				"all",
+				"allocations"
+			],
+			[
+				"Inv",
+				"invoice"
+			],
+			[
+				"allo",
+				"allocations"
+			],
+			[
+				"al",
+				"allocation"
+			],
+			[
+				"crea",
+				"createStore"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"bor",
+				"borderw"
+			],
+			[
+				"getPa",
+				"getPatient"
+			],
+			[
+				"e",
+				"error"
+			],
+			[
+				"re",
+				"record"
+			],
+			[
+				"cha",
+				"chargeServices"
+			],
+			[
+				"errr",
+				"errorHandler"
+			],
+			[
+				"type",
+				"types"
+			],
+			[
+				"pati",
+				"patienttransactions"
+			],
+			[
+				"sus",
+				"suspendEvents"
+			],
+			[
+				"resu",
+				"resumeAutoSync"
+			],
+			[
+				"Trea",
+				"TreatmentPlans"
+			],
+			[
+				"Visit",
+				"VisitId"
+			],
+			[
+				"visi",
+				"visitCombobox"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"tre",
+				"TreatmentPlan"
+			],
+			[
+				"vi",
+				"visitsTitle"
+			],
+			[
+				"vit",
+				"visit"
+			],
+			[
+				"title",
+				"titleIndex"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"feeSche",
+				"FeeScheduleId"
+			],
+			[
+				"fee",
+				"FeeScheduleId"
+			],
+			[
+				"serviceFee",
+				"serviceFeeGrid"
+			],
+			[
+				"getSe",
+				"getSelection"
+			],
+			[
+				"selected",
+				"selectedRecordId"
+			],
+			[
+				"code",
+				"codeTitle"
+			],
+			[
+				"a",
+				"add"
+			],
+			[
+				"Pre",
+				"PredefinedServiceId"
+			],
+			[
+				"fie",
+				"field"
+			],
+			[
+				"pr",
+				"PredefinedServices"
+			],
+			[
+				"bo",
+				"bodyTpl"
+			],
+			[
+				"rec",
+				"records"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"App",
+				"AppointmentCategoryId"
+			],
+			[
+				"field",
+				"fields"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/oleg/Documents/Projects/ResumeBuilder/package.json",
+			"settings":
+			{
+				"buffer_size": 1072,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/oleg/Documents/Projects/ResumeBuilder/Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 11642,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 10437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 956,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Client Compile",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"sq",
+				"Set Syntax: SQL"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"sas",
+				"SassBeautify"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"diff",
+				"SVN: (File) Diff"
+			],
+			[
+				"stat",
+				"SVN: Status"
+			],
+			[
+				"rever",
+				"SVN: (File) Revert"
+			],
+			[
+				"log",
+				"SVN: (File) Log"
+			],
+			[
+				"svn",
+				"SVN: Diff"
+			],
+			[
+				"build:",
+				"Build: Cancel"
+			],
+			[
+				"beau",
+				"SassBeautify"
+			],
+			[
+				"bea",
+				"SassBeautify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"lint",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"bas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"unfo",
+				"Code Folding: Unfold All"
+			],
+			[
+				"fold",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"pdb",
+				"SublimeREPL: Python - PDB current file"
+			],
+			[
+				"import",
+				"Rope: Organize Imports"
+			],
+			[
+				"assis",
+				"Rope: Import Assist"
+			],
+			[
+				"repl:",
+				"SublimeREPL: Python - PDB current file"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"rope:",
+				"Rope: Organize Imports"
+			],
+			[
+				"assi",
+				"Rope: Import Assist"
+			],
+			[
+				"imports",
+				"Rope: Import Assist"
+			],
+			[
+				"rope",
+				"Rope: Organize Imports"
+			],
+			[
+				"refa",
+				"Rope Refactoring: Rename"
+			],
+			[
+				"refactor",
+				"Rope Refactoring: Rename"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spae",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"rop",
+				"Rope: New Project"
+			],
+			[
+				"sni",
+				"Snippet: New Property"
+			],
+			[
+				"au",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packagec",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Object Value JS"
+			],
+			[
+				"to",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"tod",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"todo",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"pli",
+				"Package Control: List Packages"
+			],
+			[
+				"h",
+				"HTMLPrettify: Prettify"
+			],
+			[
+				"package c",
+				"Package Control: List Packages"
+			],
+			[
+				"package co",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"sublimel",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"lin",
+				"SublimeLinter: Show Error List"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 418.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/oleg/Dropbox/Documents/resume-builder/app/index.html",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/app/index.html",
+		"/Users/oleg/Dropbox/Documents/resume-builder/Gruntfile.js",
+		"/Users/oleg/Dropbox/Documents/resume-builder/package.json",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/Gruntfile.js",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/ResumeBuilder.sublime-project",
+		"/Users/oleg/Dropbox/Documents/resume-builder/bower.json",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/app/styles/main.less",
+		"/Users/oleg/123/app/styles/main.less",
+		"/Users/oleg/123/bower.json",
+		"/Users/oleg/123/node_modules/grunt-contrib-less/tasks/less.js",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/app/bower_components/grunt-contrib-less/tasks/less.js",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/app/bower_components/grunt-contrib-less/docs/less-examples.md",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/node_modules/connect-livereload/LICENSE",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/app/bower_components/bootstrap/grunt/bs-lessdoc-parser.js",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/node_modules/grunt-contrib-jshint/node_modules/jshint/src/lex.js",
+		"/Users/oleg/123/node_modules/grunt-contrib-less/node_modules/.bin/lessc",
+		"/Users/oleg/123/node_modules/grunt-contrib-less/docs/less-examples.md",
+		"/Users/oleg/Documents/Projects/ResumeBuilder/node_modules/grunt-neuter/test/expected/glob_require",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/migrations/20140101162630-add-patients.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/migrations/20131230080903-add-users.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/app.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/component/ServiceInfo.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/view/Schedule.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/routes/services.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/component/Services.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/view/DayBody.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/form/EventWindow.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/form/field/CalendarCombo.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/sass/src/view/Schedule.scss",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/MemoryCalendarStore.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/CalendarModel.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/CalendarMappings.js",
+		"/Users/oleg/Library/Application Support/Google/Chrome/Local State",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/resources/icons/copy-icons.sh",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/controller/Schedule.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/EventModel.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/view/Main.js",
+		"/Users/oleg/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/MemoryEventStore.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/form/field/DateRange.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/App.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/dd/StatusProxy.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/view/AbstractCalendar.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/CalendarPanel.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/sass/etc/calendar.scss",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/Calendars.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/package.json",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/EventMappings.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/data/Events.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/migrations/20140303081711-use-enum-in-appointment.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/view/Month.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/migrations/20140313071143-add-appointment-callback-status.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/util/WeekEventRenderer.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/calendar/view/MonthDayDetail.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/model/Patient.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/store/Users.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/routes/users.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/model/User.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/models/user.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/utils.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/migrations/20140223155747-add-service-charged.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/revert-production.sh",
+		"/Users/oleg/Dropbox/Documents/dental-portal/update-production.sh",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/models/image.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/model/Image.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/view/FeeSchedule.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/component/PatientImages.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/routes/images.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/model/Appointment.js",
+		"/Users/oleg/Dropbox/Documents/dental-portal/dental-portal/public/app/component/PatientSchedule.js",
+		"/Users/oleg/Desktop/wc_trunks/products/webconsole/client/build.sh",
+		"/Users/oleg/Downloads/MacPass/README.md",
+		"/Users/oleg/Desktop/mac",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/resources/icons/copy-icons.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/sass/src/view/Schedule.scss",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/Main.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/appointments.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/models/appointment.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/calendar/form/EventWindow.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/Schedule.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/calendar/template/DayBody.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/migrations/20140303081711-use-enum-in-appointment.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/Payment.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/images.js",
+		"/home/oleg/Downloads/extjs4-zend-json/public/app/controller/Main.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal-client.sublime-project",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/ext/src/form/action/Submit.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/Patient.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/sass/src/component/PatientImages.scss",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/PatientImages.js",
+		"/home/oleg/Documents/Projects/dental-portal/.gitignore",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/utils.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/feeSchedules.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/ServiceInfo.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/model/Image.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/Services.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/TreatmentPlans.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/FeeSchedule.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/Users.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/config.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/app.js",
+		"/home/oleg/Documents/Projects/dental-portal/backup-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/Transactions.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/Patients.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/store/Images.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/component/PatientSchedule.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/serviceFees.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/Application.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/model/Appointment.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/models/image.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/migrations/20140309160909-add-images.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/models/visit.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/migrations/20140226065834-add-transaction-items.js",
+		"/home/oleg/Documents/Projects/dental-portal/update-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/Readme.md",
+		"/home/oleg/Documents/Projects/dental-portal/revert-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/migrate-db.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/update-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/revert-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/restore.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/backup-production.sh",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/models/serviceFee.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app.js",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/build/testing/Portal/index.html",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/build/production/Portal/index.html",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/.sencha/app/build-impl.xml",
+		"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/transactions.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"*",
+			"",
+			"*.js",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/",
+			"*.js",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/routes/",
+			"/routes/*",
+			"/routes/",
+			"*.js",
+			"",
+			"*.js",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/node_modules/sequelize/lib/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/store/",
+			"",
+			"dental-portal/routes/",
+			"*.js",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/migrations/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/",
+			"*.js",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/node_modules/sequelize",
+			"/home/oleg/Documents/Projects/dental-portal/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/view/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/public/app/calendar/",
+			"*.js",
+			"",
+			"public/app",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/node_modules/sequelize/",
+			"",
+			"/home/oleg/Documents/Projects/dental-portal/dental-portal/node_modules/sequelize/",
+			"*.js",
+			"*",
+			"*.js",
+			"*.*",
+			"*.scss",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*",
+			"*.js",
+			"*",
+			"*.py",
+			"*",
+			"*.js",
+			"*.py",
+			"*",
+			"*.py",
+			"*",
+			"*.scss",
+			"*.py",
+			"*",
+			"*.js",
+			"step.js",
+			"step*.js",
+			"*step*.js",
+			"*.scss",
+			"*",
+			"*.js",
+			"*.py",
+			"*.js",
+			"",
+			"*.py",
+			"*.js",
+			"*.py",
+			"",
+			"*.js",
+			"",
+			"*.py",
+			"*.js",
+			"*.scss",
+			"*",
+			"*.js",
+			"*.py",
+			"",
+			"<open files>",
+			"",
+			"<open files>",
+			"",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*",
+			"*.js",
+			"*.scss",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*.js",
+			"*.py",
+			"*",
+			"*.js",
+			"*.scss"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"neuter",
+			"jshint",
+			"оырште",
+			"concurrent",
+			"emberTemplates",
+			"replace",
+			".js",
+			"less",
+			"coff",
+			"less",
+			"bootstrap",
+			"sass",
+			"color:gray",
+			"saveFieldValue",
+			"setReadonly",
+			"'checkbox'",
+			"#505050",
+			"#{$i}",
+			"ext-color-",
+			"-0",
+			"ext-color-",
+			"Le",
+			"calendarLegend",
+			"calendars",
+			"EventWindow",
+			"loadDoctors",
+			"Ext.calendar.data.CalendarModel",
+			"persist: ",
+			"persists: ",
+			"bin",
+			"color",
+			"ColorId",
+			"filters: ",
+			"appointment",
+			"hand-o-right",
+			"appointment",
+			"span",
+			"tool",
+			"Callback:",
+			"span",
+			"tip",
+			"Callback: ",
+			"targetState",
+			"serviced",
+			"appointment-state",
+			"white",
+			"showWorkflowOptions",
+			"targetState:",
+			"legend",
+			"appointment-callbackState",
+			"Cancelled",
+			"Callback",
+			"\n",
+			": ",
+			"\n",
+			"scheduled",
+			"state",
+			"getStateName",
+			": ",
+			"getStateName",
+			"appointment-state",
+			"callbackStatus",
+			"TreatmentPlans",
+			"infoPanel",
+			"Ext.getBody().unmask();",
+			"();\n",
+			"Ext.getBody().mask('Uploading...');",
+			"showError",
+			"reloadImages",
+			"Ext.MessageBox",
+			"self",
+			"holder",
+			"addEventListener(\"",
+			"formaction.submit",
+			"ondragend",
+			"this.store",
+			"self",
+			"this.dataView",
+			"this",
+			"this.dataView",
+			"myGridPanel",
+			"max",
+			"Math.",
+			"imageName",
+			"createUpdHandler",
+			"this.selectedRecord",
+			"rec ? ",
+			"str",
+			".loadRecord",
+			"nodes.length",
+			"nodes[0]",
+			"5 0 0 0",
+			"name",
+			"persist:",
+			"',",
+			"', ",
+			"',",
+			" '",
+			"itemId",
+			"combobox",
+			"__dirname, '..', ",
+			"'uploads'",
+			"'public', ",
+			"Ext.cre",
+			"Ext.crea",
+			"patienttransactions",
+			"Portal.component.Transactions",
+			"Ext.create(",
+			"Portal.component.TreatmentPlans",
+			"'Portal.component.Transactions'",
+			"date",
+			"this.store.on('write",
+			"trash-o",
+			"Ext.Date.format",
+			"dateFormat",
+			"self",
+			"resources",
+			"#images-view ",
+			"stripTags",
+			"dateString",
+			"sizeString",
+			"Loading",
+			"unmas",
+			"setRecord: function(",
+			"transactions",
+			".Transaction",
+			"}]\n",
+			"record"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"resources/icons/trash-o.png",
+			"'",
+			"\"",
+			"'",
+			"\"",
+			"ERROR_CONNECTION_FATAL_FORMAT",
+			"ERROR_NETWORK_FATAL",
+			"'",
+			"data-index",
+			"//",
+			"if",
+			" ",
+			"this.gtobMachinesStore",
+			"this.gtobStore",
+			"this.gtobMachinesStore",
+			"this.daysOfWeek",
+			"this.weeksRepeat",
+			"this.weeklyConfig",
+			"this.daysRepeat",
+			"this.dailyConfig",
+			"this.onceTime",
+			"this.onceDate",
+			"this.onceConfig",
+			"this.scheduleType",
+			"this.scheduleConfig",
+			"this.enableSchedule",
+			"BACKUP_WIZARD_INCREMENTAL_SCHEDULE",
+			"'",
+			"|",
+			"\"",
+			"",
+			"\\1",
+			"/",
+			"\"",
+			"",
+			"'",
+			"",
+			"\"",
+			"",
+			",",
+			"'",
+			"\"",
+			"'",
+			"this.highlightSubstring(",
+			"",
+			"<",
+			">",
+			"<",
+			"'",
+			"appmenu-notifications",
+			"",
+			"'application'",
+			"this.up('#viewport')",
+			" | ",
+			"\\n",
+			"",
+			"\\n",
+			"target_vm",
+			"target_new_vm",
+			"i++",
+			":5px;",
+			"recovery-point-menu",
+			"recovery-points-more",
+			"showOrHideItems",
+			"'",
+			"backup-wizard-group-item",
+			"\\\\\\\\",
+			"\\\\",
+			"[0-9]",
+			"\\d",
+			"[0-9]",
+			";",
+			"\\r",
+			"backup-plan-no-activities",
+			"|",
+			"",
+			"console",
+			"console.log('n+loading');",
+			",\\n",
+			"\\n",
+			"Acronis.dir",
+			"Acronis.log",
+			"Trace.log",
+			"// Debug.log",
+			"'",
+			"\\\\",
+			"",
+			"'",
+			"' +",
+			",",
+			" - ",
+			"\\n",
+			"",
+			"updatedNodes",
+			"",
+			"\\\\",
+			"\\r\\n",
+			" !important;",
+			"",
+			"onValidStatusChange",
+			"<",
+			"",
+			"this.",
+			"existingViews",
+			"/resources/images/grid/",
+			"'status-error'",
+			"'status-warning'",
+			"'status-ok'",
+			"'offline'",
+			"'online'",
+			"'all'",
+			"Acronis.components.MachineList",
+			"/web_core/resources/images/machinelist",
+			"statusFilterRendered",
+			"statusFilterChanged",
+			" ",
+			"'",
+			"stopped",
+			"\\t",
+			"'a'",
+			"recalcLayout",
+			"layoutParent",
+			"layoutNavigationPanel",
+			"/",
+			"\\\\\\\\",
+			"\\\\",
+			"backupPlanHasMachine",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/oleg/Documents/Projects/ResumeBuilder/package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								1023
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/oleg/Documents/Projects/ResumeBuilder/Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2157,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 69.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								907,
+								907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 318.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"project": "resume-builder.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"grun",
+				"Gruntfile.js"
+			],
+			[
+				"add-p",
+				"migrations/20140321070004-add-practices.js"
+			],
+			[
+				"servicei",
+				"public/app/component/ServiceInfo.js"
+			],
+			[
+				"services.",
+				"public/app/component/Services.js"
+			],
+			[
+				"paym",
+				"public/app/component/Payment.js"
+			],
+			[
+				"calcom",
+				"public/app/calendar/form/field/CalendarCombo.js"
+			],
+			[
+				"schedl",
+				"public/sass/src/view/Schedule.scss"
+			],
+			[
+				"sche.sc",
+				"public/sass/src/view/Schedule.scss"
+			],
+			[
+				"calenda",
+				"public/app/calendar/form/field/CalendarCombo.js"
+			],
+			[
+				"calendarco",
+				"public/app/calendar/form/field/CalendarCombo.js"
+			],
+			[
+				"eventw",
+				"public/app/calendar/form/EventWindow.js"
+			],
+			[
+				"calendars",
+				"public/app/calendar/data/MemoryCalendarStore.js"
+			],
+			[
+				"main",
+				"public/app/view/Main.js"
+			],
+			[
+				"event",
+				"public/app/calendar/data/EventModel.js"
+			],
+			[
+				"schedu",
+				"public/app/view/Schedule.js"
+			],
+			[
+				"calendarma",
+				"public/app/calendar/data/CalendarMappings.js"
+			],
+			[
+				"model",
+				"public/app/calendar/data/CalendarModel.js"
+			],
+			[
+				"user",
+				"public/app/model/User.js"
+			],
+			[
+				"sche",
+				"public/app/view/Schedule.js"
+			],
+			[
+				"cop",
+				"dental-portal/public/resources/icons/copy-icons.sh"
+			],
+			[
+				"mai",
+				"dental-portal/public/app/view/Main.js"
+			],
+			[
+				"icon",
+				"dental-portal/public/resources/icons/copy-icons.sh"
+			],
+			[
+				"appo",
+				"dental-portal/models/appointment.js"
+			],
+			[
+				"appoin",
+				"dental-portal/routes/appointments.js"
+			],
+			[
+				"day",
+				"dental-portal/public/app/calendar/view/DayBody.js"
+			],
+			[
+				"appoi",
+				"dental-portal/public/app/model/Appointment.js"
+			],
+			[
+				"images",
+				"dental-portal/routes/images.js"
+			],
+			[
+				"submi",
+				"public/ext/src/form/action/Submit.js"
+			],
+			[
+				"patient",
+				"public/app/view/Patient.js"
+			],
+			[
+				"patima",
+				"public/sass/src/component/PatientImages.scss"
+			],
+			[
+				"fees",
+				"public/app/view/FeeSchedule.js"
+			],
+			[
+				"utils",
+				"utils.js"
+			],
+			[
+				"ima",
+				"public/app/model/Image.js"
+			],
+			[
+				"image",
+				"models/image.js"
+			],
+			[
+				"serv",
+				"public/app/component/ServiceInfo.js"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"transa",
+				"public/app/component/Transactions.js"
+			],
+			[
+				"pattra",
+				"public/app/component/Transactions.js"
+			],
+			[
+				"appl",
+				"public/app/Application.js"
+			],
+			[
+				"patients.",
+				"public/app/view/Patients.js"
+			],
+			[
+				"pats",
+				"public/app/component/PatientSchedule.js"
+			],
+			[
+				"patients",
+				"public/app/component/PatientSchedule.js"
+			],
+			[
+				"patient.js",
+				"public/app/view/Patient.js"
+			],
+			[
+				"upda",
+				"update-production.sh"
+			],
+			[
+				"servicef",
+				"models/serviceFee.js"
+			],
+			[
+				"services",
+				"public/app/component/Services.js"
+			],
+			[
+				"pasche",
+				"public/app/component/PatientSchedule.js"
+			],
+			[
+				"service",
+				"public/app/component/Services.js"
+			],
+			[
+				"treatmentpl",
+				"public/app/component/TreatmentPlans.js"
+			],
+			[
+				"treatmentp",
+				"public/app/component/TreatmentPlans.js"
+			],
+			[
+				"transactions",
+				"public/app/store/Transactions.js"
+			],
+			[
+				"tra",
+				"public/app/component/Transactions.js"
+			],
+			[
+				"trasa",
+				"public/app/component/Transactions.js"
+			],
+			[
+				"pay",
+				"public/app/component/Payment.js"
+			],
+			[
+				"transactioni",
+				"public/app/model/TransactionItem.js"
+			],
+			[
+				"copy",
+				"public/resources/icons/copy-icons.sh"
+			],
+			[
+				"add-hi",
+				"migrations/20140304090804-add-hidden-to-plan.js"
+			],
+			[
+				"mo/tre",
+				"public/app/model/TreatmentPlan.js"
+			],
+			[
+				"mo/trea",
+				"models/treatmentPlan.js"
+			],
+			[
+				"payment",
+				"public/app/component/Payment.js"
+			],
+			[
+				"con/patient",
+				"public/app/controller/Patients.js"
+			],
+			[
+				"mo/service.",
+				"public/app/model/Service.js"
+			],
+			[
+				"patient.",
+				"public/sass/src/view/Patient.scss"
+			],
+			[
+				"pasc",
+				"public/app/component/PatientSchedule.js"
+			],
+			[
+				"enum-",
+				"migrations/20140303081711-use-enum-in-appointment.js"
+			],
+			[
+				"use-",
+				"dental-portal/migrations/20140303081711-use-enum-in-appointment.js"
+			],
+			[
+				"schedule",
+				"dental-portal/public/app/controller/Schedule.js"
+			],
+			[
+				"mo/tra",
+				"dental-portal/models/transaction.js"
+			],
+			[
+				"-enum",
+				"dental-portal/migrations/20140301144520-use-enums-in-transactions.js"
+			],
+			[
+				"transactio",
+				"dental-portal/models/transaction.js"
+			],
+			[
+				"servi",
+				"dental-portal/public/app/component/Services.js"
+			],
+			[
+				"patient.j",
+				"dental-portal/public/app/view/Patient.js"
+			],
+			[
+				"con/pat",
+				"dental-portal/public/app/controller/Patients.js"
+			],
+			[
+				"payme",
+				"dental-portal/public/app/component/Payment.js"
+			],
+			[
+				"tranitem",
+				"dental-portal/models/transactionItem.js"
+			],
+			[
+				"rou/tr",
+				"dental-portal/routes/transactions.js"
+			],
+			[
+				"mo/transactio",
+				"dental-portal/public/app/model/Transaction.js"
+			],
+			[
+				"ro/tra",
+				"dental-portal/routes/transactions.js"
+			],
+			[
+				"add-type",
+				"dental-portal/migrations/20140228075643-add-transaction-item-type.js"
+			],
+			[
+				"mo/transaction.",
+				"dental-portal/public/app/model/Transaction.js"
+			],
+			[
+				"index",
+				"dental-portal/public/index.html"
+			],
+			[
+				"feesc",
+				"dental-portal/public/app/view/FeeSchedule.js"
+			],
+			[
+				"number",
+				"dental-portal/public/ext/src/grid/column/Number.js"
+			],
+			[
+				"tran",
+				"dental-portal/routes/transactions.js"
+			],
+			[
+				"add-pa",
+				"dental-portal/migrations/20140227075857-add-patient-balance.js"
+			],
+			[
+				"transactions.",
+				"dental-portal/routes/transactions.js"
+			],
+			[
+				"add-tra",
+				"dental-portal/migrations/20140226065834-add-transaction-items.js"
+			],
+			[
+				"transaction.js",
+				"dental-portal/models/Transaction.js"
+			],
+			[
+				"plans",
+				"dental-portal/routes/plans.js"
+			],
+			[
+				"pas",
+				"dental-portal/public/app/component/PatientSchedule.js"
+			],
+			[
+				"add-servi-ca",
+				"dental-portal/migrations/20140223155747-add-service-charged.js"
+			],
+			[
+				"service.",
+				"dental-portal/public/app/model/Service.js"
+			],
+			[
+				"visit",
+				"dental-portal/public/app/model/Visit.js"
+			],
+			[
+				"uti",
+				"dental-portal/utils.js"
+			],
+			[
+				"visi",
+				"dental-portal/routes/visits.js"
+			],
+			[
+				"visit.",
+				"dental-portal/models/visit.js"
+			],
+			[
+				"predef",
+				"dental-portal/public/app/model/PredefinedService.js"
+			],
+			[
+				"predefi",
+				"dental-portal/public/app/model/PredefinedService.js"
+			],
+			[
+				"servicefee.",
+				"dental-portal/public/app/model/ServiceFee.js"
+			],
+			[
+				"servicefee",
+				"dental-portal/public/app/store/ServiceFees.js"
+			],
+			[
+				"patsche",
+				"dental-portal/public/app/component/PatientSchedule.js"
+			],
+			[
+				"evewind",
+				"dental-portal/public/app/calendar/form/EventWindow.js"
+			],
+			[
+				"date",
+				"dental-portal/public/app/calendar/form/field/DateRange.js"
+			],
+			[
+				"mont",
+				"dental-portal/public/app/calendar/template/Month.js"
+			],
+			[
+				"calendar",
+				"dental-portal/public/sass/etc/calendar.scss"
+			],
+			[
+				".sh",
+				"dental-portal/public/resources/icons/copy-icons.sh"
+			],
+			[
+				"dayb",
+				"dental-portal/public/app/calendar/view/DayBody.js"
+			],
+			[
+				"body",
+				"dental-portal/public/app/calendar/template/DayBody.js"
+			],
+			[
+				"treat",
+				"dental-portal/public/app/model/TreatmentPlan.js"
+			],
+			[
+				"a/m/service",
+				"dental-portal/public/app/model/Service.js"
+			],
+			[
+				"calen",
+				"dental-portal/public/sass/etc/calendar.scss"
+			],
+			[
+				"st/patients",
+				"dental-portal/public/app/store/Patients.js"
+			],
+			[
+				"schedul",
+				"dental-portal/public/app/controller/Schedule.js"
+			],
+			[
+				"mo/appoi",
+				"dental-portal/public/app/model/Appointment.js"
+			],
+			[
+				"visits",
+				"dental-portal/routes/visits.js"
+			],
+			[
+				"app.",
+				"dental-portal/app.js"
+			],
+			[
+				"migra",
+				"dental-portal/migrate-db.sh"
+			],
+			[
+				"combob",
+				"dental-portal/public/ext/src/form/field/ComboBox.js"
+			],
+			[
+				"v/patient.js",
+				"dental-portal/public/app/view/Patient.js"
+			],
+			[
+				"paging",
+				"dental-portal/public/ext/src/toolbar/Paging.js"
+			],
+			[
+				"appli",
+				"dental-portal/public/ext/src/app/Application.js"
+			],
+			[
+				"patientse",
+				"dental-portal/public/app/component/PatientSchedule.js"
+			],
+			[
+				"apoi",
+				"dental-portal/public/app/store/Appointments.js"
+			],
+			[
+				"model/appointment",
+				"dental-portal/public/app/model/Appointment.js"
+			],
+			[
+				"pat",
+				"dental-portal/public/app/component/PatientSchedule.js"
+			],
+			[
+				"sched",
+				"dental-portal/public/app/view/Schedule.js"
+			],
+			[
+				"seervice",
+				"dental-portal/public/app/store/ServiceFees.js"
+			],
+			[
+				"mo/se",
+				"dental-portal/public/app/model/Service.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 626.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/Documents/dental-portal/dental-portal-client.sublime-project"
+			],
+			[
+				"js",
+				"/home/oleg/Projects/fwf/ember-test-sass.sublime-project"
+			],
+			[
+				"em",
+				"/home/oleg/Projects/fwf/ember-test-sass.sublime-project"
+			],
+			[
+				"ass",
+				"/home/oleg/Projects/QrCodeApp/asset-management.sublime-project"
+			],
+			[
+				"fw",
+				"/home/oleg/Projects/fwf/fwf.sublime-project"
+			],
+			[
+				"vclo",
+				"/C/Users/Oleg.Iaroshevych/Projects/Acronis/vCloud.sublime-project"
+			],
+			[
+				"vc",
+				"/C/Users/Oleg.Iaroshevych/Projects/Acronis/vCloud.sublime-project"
+			]
+		],
+		"width": 860.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
