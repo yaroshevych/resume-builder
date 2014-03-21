@@ -1,0 +1,17 @@
+{
+  "name": "resume-builder",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "3.1",
+    "font-awesome": "~4.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "2.1",
+    "ember": "1.4",
+    "ember-data": "1"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "ember": "~1.4.0",
+    "jquery": "2.1"
+  }
+}
