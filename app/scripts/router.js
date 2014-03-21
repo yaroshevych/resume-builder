@@ -1,3 +1,4 @@
-Resumebuilder.Router.map(function () {
+App.Router.map(function () {
+	this.resource('about');
   // Add your routes here
 });
