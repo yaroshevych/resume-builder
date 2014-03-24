@@ -1,8 +1,5 @@
 'use strict';
 
-/*
- * Express Dependencies
- */
 var express = require('express');
 var path = require('path');
 var app = express();
@@ -57,9 +54,8 @@ app.use(express.compress());
 
 if (process.env.NODE_ENV === 'production') {
     // TODO:
-
 } else {
-    app.use('/', express['static'](path.join(__dirname, '/app'), {
+    app.use('/', express['static'](path.join(__dirname, '/client'), {
         maxAge: 0
     }));
 

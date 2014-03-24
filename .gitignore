@@ -24,14 +24,10 @@ Thumbs.db
 node_modules
 dist
 .tmp
-app/bower_components
-
-app/styles/main.css.map
-
-app/styles/main.css
-
-app/styles/main.css
-
-app/styles/main.css.map
+client/bower_components
+client/styles/main.css.map
+client/styles/main.css
+client/styles/main.css
+client/styles/main.css.map
 
 *.sublime-workspace
