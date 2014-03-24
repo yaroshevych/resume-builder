@@ -1,7 +1,18 @@
 {
   "name": "resume-builder",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "3.4.5",
+    "lodash": "~2.4.1",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6",
+    "bcrypt": "~0.7.7",
+    "intel": "~0.4.0"
+  },
+  "scripts": {
+    "nodemon": "nodemon --debug app.js",
+    "debug": "node-inspector"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
@@ -17,6 +28,7 @@
     "grunt-contrib-imagemin": "0.1.4",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-ember-templates": "0.4.14",
+    "grunt-express-server": "~0.4.2",
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~0.1.12",
     "grunt-mocha": "~0.4.0",

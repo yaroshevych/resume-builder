@@ -22,6 +22,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
+            // files: ['app/**/*'],
+            // options: {
+            //     livereload: true
+            // },
             emberTemplates: {
                 files: '<%= yeoman.app %>/templates/**/*.hbs',
                 tasks: ['emberTemplates']
@@ -30,61 +34,69 @@ module.exports = function(grunt) {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['neuter']
             },
-            coffee: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee']
-            },
+            // coffee: {
+            //     files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+            //     tasks: ['coffee']
+            // },
             less: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
                 tasks: ['less']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
-            },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: [
-                    '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
             }
+            // ,
+            // express: {
+            //     files: ['app.js', '!**/node_modules/**', '!Gruntfile.js'],
+            //     tasks: ['express:dev'],
+            //     options: {
+            //         nospawn: true // Without this option specified express won't be reloaded
+            //     }
+            // }
+            // livereload: {
+            //     options: {
+            //         livereload: '<%= connect.options.livereload %>'
+            //     },
+            //     files: [
+            //         '<%= yeoman.app %>/*.html',
+            //         '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
+            //         '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
+            //         '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+            //     ]
+            // }
         },
-        connect: {
-            options: {
-                port: 9000,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost',
-                livereload: 35729
-            },
-            livereload: {
-                options: {
-                    open: true,
-                    base: [
-                        '.tmp',
-                        '<%= yeoman.app %>'
-                    ]
-                }
-            },
-            test: {
-                options: {
-                    port: 9001,
-                    base: [
-                        '.tmp',
-                        'test',
-                        '<%= yeoman.app %>'
-                    ]
-                }
-            },
-            dist: {
-                options: {
-                    base: '<%= yeoman.dist %>'
-                }
-            }
-        },
+        // connect: {
+        //     options: {
+        //         port: 9000,
+        //         // change this to '0.0.0.0' to access the server from outside
+        //         hostname: 'localhost',
+        //         livereload: 35729
+        //     },
+        //     livereload: {
+        //         options: {
+        //             open: true,
+        //             base: [
+        //                 '.tmp',
+        //                 '<%= yeoman.app %>'
+        //             ]
+        //         }
+        //     },
+        //     test: {
+        //         options: {
+        //             port: 9001,
+        //             base: [
+        //                 '.tmp',
+        //                 'test',
+        //                 '<%= yeoman.app %>'
+        //             ]
+        //         }
+        //     },
+        //     dist: {
+        //         options: {
+        //             base: '<%= yeoman.dist %>'
+        //         }
+        //     }
+        // },
         clean: {
             dist: {
                 files: [{
@@ -98,37 +110,37 @@ module.exports = function(grunt) {
             },
             server: '.tmp'
         },
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                // 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
-            ]
-        },
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://localhost:<%= connect.options.port %>/index.html']
-                }
-            }
-        },
-        coffee: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/scripts',
-                    src: '{,*/}*.coffee',
-                    dest: '<%= yeoman.app %>/scripts',
-                    ext: '.js'
-                }]
-            }
-        },
+        // jshint: {
+        //     options: {
+        //         jshintrc: '.jshintrc',
+        //         reporter: require('jshint-stylish')
+        //     },
+        //     all: [
+        //         // 'Gruntfile.js',
+        //         '<%= yeoman.app %>/scripts/{,*/}*.js',
+        //         '!<%= yeoman.app %>/scripts/vendor/*',
+        //         'test/spec/{,*/}*.js'
+        //     ]
+        // },
+        // mocha: {
+        //     all: {
+        //         options: {
+        //             run: true,
+        //             urls: ['http://localhost:<%= connect.options.port %>/index.html']
+        //         }
+        //     }
+        // },
+        // coffee: {
+        //     dist: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: '<%= yeoman.app %>/scripts',
+        //             src: '{,*/}*.coffee',
+        //             dest: '<%= yeoman.app %>/scripts',
+        //             ext: '.js'
+        //         }]
+        //     }
+        // },
         less: {
             dist: {
                 files: {
@@ -262,7 +274,7 @@ module.exports = function(grunt) {
         },
         concurrent: {
             dist: [
-                'coffee',
+                // 'coffee',
                 'less',
                 'imagemin',
                 'svgmin',
@@ -292,6 +304,17 @@ module.exports = function(grunt) {
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/combined-scripts.js'
             }
+        },
+        // Express Config
+        express: {
+            options: {
+                // Override defaults here
+            },
+            dev: {
+                options: {
+                    script: 'app.js'
+                }
+            }
         }
     });
 
@@ -302,30 +325,43 @@ module.exports = function(grunt) {
 
         grunt.task.run([
             'clean:server',
-            'coffee',
+            // 'coffee',
             'emberTemplates',
             'neuter:app',
             'less',
             'copy:server',
-            'connect:livereload',
+            // 'connect:livereload',
+            'express:dev',
             'watch'
         ]);
     });
 
-    grunt.registerTask('server', function() {
-        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run(['serve']);
-    });
+    // grunt.registerTask('server', function() {
+    //     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    //     grunt.task.run(['serve']);
+    // });
 
-    grunt.registerTask('test', [
+    // grunt.registerTask('test', [
+    //     'clean:server',
+    //     // 'coffee',
+    //     'less',
+    //     'copy:server',
+    //     'connect:test',
+    //     'neuter:app'
+    //     // 'mocha'
+    // ]);
+    grunt.registerTask('watchClient', [
         'clean:server',
-        'coffee',
+        // 'coffee',
+        'emberTemplates',
+        'neuter:app',
         'less',
         'copy:server',
-        'connect:test',
-        'neuter:app',
-        'mocha'
+        // 'connect:livereload',
+        // 'express:dev',
+        'watch'
     ]);
+
 
     grunt.registerTask('build', [
         'clean:dist',
