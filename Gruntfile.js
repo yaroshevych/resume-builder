@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 
     // configurable paths
     var yeomanConfig = {
-        app: require('./bower.json').appPath || 'app',
+        app: require('./bower.json').appPath || 'client',
         dist: 'dist'
     };
 
@@ -104,7 +104,9 @@ module.exports = function(grunt) {
                     src: [
                         '.tmp',
                         '<%= yeoman.dist %>/*',
-                        '!<%= yeoman.dist %>/.git*'
+                        '!<%= yeoman.dist %>/.git*',
+                        '<%= yeoman.app %>/styles/main.css',
+                        '<%= yeoman.app %>/styles/main.css.map'
                     ]
                 }]
             },
@@ -288,9 +290,9 @@ module.exports = function(grunt) {
                     return sourceFile.replace(templatePath, '');
                 }
             },
-            dist: {
+            app: {
                 files: {
-                    '.tmp/scripts/compiled-templates.js': '<%= yeoman.app %>/templates/{,*/}*.hbs'
+                    '.tmp/scripts/templates.js': '<%= yeoman.app %>/templates/{,*/}*.hbs'
                 }
             }
         },
@@ -302,7 +304,7 @@ module.exports = function(grunt) {
                     }
                 },
                 src: '<%= yeoman.app %>/scripts/app.js',
-                dest: '.tmp/scripts/combined-scripts.js'
+                dest: '.tmp/scripts/app.js'
             }
         },
         // Express Config
@@ -327,7 +329,7 @@ module.exports = function(grunt) {
             'clean:server',
             // 'coffee',
             'emberTemplates',
-            'neuter:app',
+            'neuter',
             'less',
             'copy:server',
             // 'connect:livereload',
@@ -354,7 +356,7 @@ module.exports = function(grunt) {
         'clean:server',
         // 'coffee',
         'emberTemplates',
-        'neuter:app',
+        'neuter',
         'less',
         'copy:server',
         // 'connect:livereload',
@@ -370,7 +372,7 @@ module.exports = function(grunt) {
         'concurrent',
         'emberTemplates',
         'cssmin',
-        'neuter:app',
+        'neuter',
         'concat',
         'uglify',
         'copy',
