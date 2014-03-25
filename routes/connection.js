@@ -4,26 +4,15 @@ var passport = require('passport'),
 
 module.exports = function(app) {
     app.get('/api/connection', session.isAuthenticated, function(req, res) {
-        mongoose.models.User.find(function(err, records) {
-            if (err) {
-                res.json(500, err);
-            } else {
-                res.json({
-                    records: records
-                });
-            }
-        });
-
+        res.json(req.user);
     });
 
     app.post('/api/connection', passport.authenticate('local'), function(req, res) {
-        return res.json({
-            name: 'ok'
-        });
+        res.json(req.user);
     });
 
     app.del('/api/connection', function(req, res) {
         req.logout();
-        return res.send();
+        res.send();
     });
 };
