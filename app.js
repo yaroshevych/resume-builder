@@ -51,15 +51,16 @@ intel.console();
 
 app.use(express.compress());
 
-
 if (process.env.NODE_ENV === 'production') {
-    // TODO:
+    app.use('/', express['static'](path.join(__dirname, '/dist'), {
+        maxAge: 31557600000 // one year
+    }));
 } else {
-    app.use('/', express['static'](path.join(__dirname, '/client'), {
+    app.use('/scripts', express['static'](path.join(__dirname, '/.tmp/scripts'), {
         maxAge: 0
     }));
 
-    app.use('/scripts', express['static'](path.join(__dirname, '/.tmp/scripts'), {
+    app.use('/', express['static'](path.join(__dirname, '/client'), {
         maxAge: 0
     }));
 }
@@ -79,5 +80,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(process.env.PORT || port);
-console.log('Express started on port ' + port);
+console.log('Express started on port ' + port + ', environment: ' + process.env.NODE_ENV);
 
