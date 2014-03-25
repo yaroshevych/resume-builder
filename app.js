@@ -1,10 +1,11 @@
 'use strict';
 
-var express = require('express');
-var path = require('path');
-var app = express();
-var port = 3000;
-var intel = require('intel');
+var express = require('express'),
+    path = require('path'),
+    app = express(),
+    port = 3000,
+    intel = require('intel'),
+    mongoose = require('mongoose');
 
 intel.config({
     formatters: {
@@ -75,6 +76,11 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use(app.router);
+
+require('./routes')(app);
+require('./models')(app);
+
 app.get('/', function(req, res) {
     res.redirect('/index.html');
 });
@@ -82,3 +88,18 @@ app.get('/', function(req, res) {
 app.listen(process.env.PORT || port);
 console.log('Express started on port ' + port + ', environment: ' + process.env.NODE_ENV);
 
+var connectionString = 'mongodb://localhost/resume-builder';
+
+mongoose.set('debug', true);
+
+mongoose.connect(connectionString, {
+    db: {
+        safe: true
+    }
+}, function(err, res) {
+    if (err) {
+        console.log('ERROR connecting to: ' + connectionString + '. ' + err);
+    } else {
+        console.log('Successfully connected to: ' + connectionString);
+    }
+});

@@ -7,10 +7,12 @@
     "passport": "~0.1.17",
     "passport-local": "~0.1.6",
     "bcrypt": "~0.7.7",
-    "intel": "~0.4.0"
+    "intel": "~0.4.0",
+    "mongoose": "^3.8.8"
   },
   "scripts": {
     "nodemon": "nodemon --debug app.js",
+    "nodemon-production": "NODE_ENV=production nodemon --debug app.js",
     "debug": "node-inspector"
   },
   "devDependencies": {
