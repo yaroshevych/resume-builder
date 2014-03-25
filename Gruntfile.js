@@ -44,8 +44,16 @@ module.exports = function(grunt) {
             },
             gruntfile: {
                 files: ['Gruntfile.js']
+            },
+            notify: {
+                files: [
+                    '<%= yeoman.app %>/templates/**/*.hbs',
+                    '<%= yeoman.app %>/scripts/{,*/}*.js',
+                    '<%= yeoman.app %>/styles/{,*/}*.less',
+                    'Gruntfile.js'
+                ],
+                tasks: ['notify:watch']
             }
-            // ,
             // express: {
             //     files: ['app.js', '!**/node_modules/**', '!Gruntfile.js'],
             //     tasks: ['express:dev'],
@@ -64,6 +72,18 @@ module.exports = function(grunt) {
             //         '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
             //     ]
             // }
+        },
+        notify: {
+            watch: {
+                options: {
+                    message: 'Client updated...'
+                }
+            },
+            watchClient: {
+                options: {
+                    message: 'Started watching client...'
+                }
+            }
         },
         // connect: {
         //     options: {
@@ -361,9 +381,9 @@ module.exports = function(grunt) {
         'copy:server',
         // 'connect:livereload',
         // 'express:dev',
+        'notify:watchClient',
         'watch'
     ]);
-
 
     grunt.registerTask('build', [
         'clean:dist',
