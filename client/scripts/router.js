@@ -3,8 +3,12 @@
 // });
 
 App.Router.map(function() {
-    this.resource('about');
+    this.resource('index', {
+        path: '/'
+    }, function() {
+        this.route('about');
+        this.route('profile');
+    });
+
     this.route('login');
-    this.route('profile');
-    // Add your routes here
 });
