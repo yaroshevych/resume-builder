@@ -7,11 +7,11 @@
     "modernizr": "~2.6.2",
     "jquery": "2.1",
     "ember": "1.4",
-    "ember-data": "1"
+    "ember-data": "1",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {},
   "resolutions": {
-    "ember": "~1.4.0",
     "jquery": "2.1"
   }
 }
