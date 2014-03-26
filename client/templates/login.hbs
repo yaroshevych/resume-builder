@@ -1,0 +1,32 @@
+<form class="form-horizontal" {{action "login" on="submit"}}>
+  {{#if loginFailed}}
+    <div class="alert">Invalid username or password.</div>
+  {{/if}}
+
+  {{#if isSlowConnection}}
+    <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
+  {{/if}}
+
+  <div class="control-group">
+    <div class="control-label">
+      <label>Username</label>
+    </div>
+
+    <div class="controls">
+      {{input value=username type="text"}}
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">
+      <label>Password</label>
+    </div>
+
+    <div class="controls">
+      {{input value=password type="password"}}
+    </div>
+  </div>
+
+  <button type="submit" class="btn" {{bindAttr disabled="isProcessing"}}>Log in!</button>
+</form>
+
