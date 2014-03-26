@@ -92,6 +92,11 @@ if (process.env.NODE_ENV === 'production') {
     app.use('/', express['static'](path.join(__dirname, '/client'), {
         maxAge: 0
     }));
+
+    intel.info('Adding latency to simulate real-life connection...');
+    app.use(function(req, res, next) {
+        setTimeout(next, 50);
+    });
 }
 
 app.use(express.cookieSession({
