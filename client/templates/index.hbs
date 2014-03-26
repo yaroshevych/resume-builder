@@ -14,7 +14,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>{{#link-to 'index.profile'}}{{email}}{{/link-to}}</li>
                     <li>{{#link-to 'index.about'}}About{{/link-to}}</li>
-                    <li><a href="#" {{action 'logout'}}>Logout</a></li>
+                    <li><a href="#" {{action 'logout'}} class="ladda-button" data-style="zoom-in" id="logout-btn" data-spinner-color="#777777" data-spinner-size="25">
+                        <span class="ladda-label">Logout</span>
+                        <span class="ladda-spinner" data-size="xs"></span>
+                        <div class="ladda-progress" style="width: 0px;"></div>
+                    </a></li>
                 </ul>
             </div>
         </div>

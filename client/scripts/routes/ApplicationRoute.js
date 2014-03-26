@@ -4,15 +4,14 @@ App.ApplicationRoute = Ember.Route.extend({
     userProfile: null,
 
     checkLogin: function() {
-        var xhr = Ember.$.getJSON('/api/connection');
+        var request = $.getJSON('/api/connection');
 
-        xhr.then(_.bind(function(user) {
-            this.userProfile.id = user._id;
+        request.done(_.bind(function(user) {
+            this.userProfile.set('id', user._id);
             this.userProfile.setProperties(user);
-            // console.log(arguments);
         }, this));
 
-        xhr.error(_.bind(function() {
+        request.fail(_.bind(function() {
             this.transitionTo('login');
         }, this));
     },
