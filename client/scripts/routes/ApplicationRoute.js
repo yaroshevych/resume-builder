@@ -1,25 +1,25 @@
 App.ApplicationRoute = Ember.Route.extend({
-    // admittedly, this should be in IndexRoute and not in the
-    // top level ApplicationRoute; we're in transition... :-)
-    userProfile: null,
-
-    checkLogin: function() {
-        var request = $.getJSON('/api/connection');
-
-        request.done(_.bind(function(user) {
-            this.userProfile.set('id', user._id);
-            this.userProfile.setProperties(user);
-        }, this));
-
-        request.fail(_.bind(function() {
-            this.transitionTo('login');
-        }, this));
-    },
+    promise: null,
 
     model: function() {
-        this.checkLogin();
+        if (!this.promise) {
+            this.promise = new Ember.RSVP.Promise(_.bind(function(resolve, reject) {
+                var request = $.getJSON('/api/connection'),
+                    model = this.store.createRecord('profile');
 
-        this.userProfile = this.store.createRecord('profile');
-        return this.userProfile;
+                request.done(_.bind(function(user) {
+                    model.set('id', user._id);
+                    model.setProperties(user);
+                    resolve(model);
+                }, this));
+
+                request.fail(_.bind(function() {
+                    resolve(model);
+                    this.transitionTo('login');
+                }, this));
+            }, this));
+        }
+
+        return this.promise;
     }
 });
