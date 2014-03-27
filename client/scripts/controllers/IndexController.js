@@ -1,9 +1,10 @@
 /*global Ladda*/
 App.IndexController = Ember.ObjectController.extend({
+    loggingOut: false,
+
     actions: {
         logout: function() {
-            var spinner = Ladda.create($('#logout-btn')[0]);
-            spinner.start();
+            this.set('loggingOut', true);
 
             var request = $.ajax({
                 type: 'DELETE',
@@ -13,7 +14,7 @@ App.IndexController = Ember.ObjectController.extend({
             request.done(_.bind(location.reload, location));
 
             request.fail(function() {
-                spinner.stop();
+                this.set('loggingOut', false);
                 // TODO: display dialog
             });
         }

@@ -1,4 +1,3 @@
-/*global Ladda*/
 App.LoginController = Ember.Controller.extend({
     needs: ['application'],
     loginFailed: false,
@@ -10,9 +9,6 @@ App.LoginController = Ember.Controller.extend({
                 loginFailed: false,
                 isProcessing: true
             });
-
-            var spinner = Ladda.create($('#login-btn')[0]);
-            spinner.start();
 
             var request = $.post('/api/connection', this.getProperties('username', 'password'));
 
@@ -26,7 +22,6 @@ App.LoginController = Ember.Controller.extend({
             }, this));
 
             request.fail(_.bind(function() {
-                spinner.stop();
                 this.setProperties({
                     loginFailed: true,
                     isProcessing: false
