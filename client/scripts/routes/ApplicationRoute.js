@@ -8,7 +8,6 @@ App.ApplicationRoute = Ember.Route.extend({
                     model = this.store.createRecord('user');
 
                 request.done(_.bind(function(user) {
-                    user.id = user._id;
                     model.setProperties(user);
                     resolve(model);
                 }, this));

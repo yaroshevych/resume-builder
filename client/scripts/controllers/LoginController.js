@@ -14,10 +14,7 @@ App.LoginController = Ember.Controller.extend({
 
             request.done(_.bind(function(user) {
                 var model = this.get('controllers.application').content;
-
-                model.set('id', user._id);
                 model.setProperties(user);
-
                 this.transitionTo('index');
             }, this));
 
