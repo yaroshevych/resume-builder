@@ -1,8 +1,12 @@
 /*global Ladda*/
 App.IndexController = Ember.ObjectController.extend({
     loggingOut: false,
+    errorMessage: '',
 
     actions: {
+        dismissErrorMessage: function() {
+            this.set('errorMessage', '');
+        },
         logout: function() {
             this.set('loggingOut', true);
 
@@ -13,10 +17,10 @@ App.IndexController = Ember.ObjectController.extend({
 
             request.done(_.bind(location.reload, location));
 
-            request.fail(function() {
+            request.fail(_.bind(function() {
                 this.set('loggingOut', false);
-                // TODO: display dialog
-            });
+                this.set('errorMessage', 'Logour failed');
+            }, this));
         }
     }
 });
