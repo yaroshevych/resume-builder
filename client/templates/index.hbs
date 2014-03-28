@@ -23,18 +23,18 @@
         </div>
     </div>
 </nav>
+
 <div class="container" id="main">
+{{#if errorMessage}}
     <div class="row">
-        <div>
-            <div class="col-md-12">
-                {{#if errorMessage}}
-                <div class="alert alert-danger alert-dismissable">
-                    <button type="button" class="close" aria-hidden="true" {{action 'dismissErrorMessage'}}>&times;</button>
-                    {{errorMessage}}
-                </div>
-                {{/if}}
-                {{outlet}}
+        <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" aria-hidden="true" {{action 'dismissErrorMessage'}}>&times;</button>
+                {{errorMessage}}
             </div>
         </div>
     </div>
+{{/if}}
+
+{{outlet}}
 </div>
