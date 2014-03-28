@@ -5,10 +5,10 @@ App.ApplicationRoute = Ember.Route.extend({
         if (!this.promise) {
             this.promise = new Ember.RSVP.Promise(_.bind(function(resolve, reject) {
                 var request = $.getJSON('/api/connection'),
-                    model = this.store.createRecord('profile');
+                    model = this.store.createRecord('user');
 
                 request.done(_.bind(function(user) {
-                    model.set('id', user._id);
+                    user.id = user._id;
                     model.setProperties(user);
                     resolve(model);
                 }, this));

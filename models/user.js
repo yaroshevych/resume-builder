@@ -4,19 +4,17 @@ var mongoose = require('mongoose'),
     bcrypt = require('bcrypt');
 
 var userSchema = new mongoose.Schema({
-    displayName: {
-        type: String
-    },
-    email: {
-        type: String
-    },
-    password: {
-        type: String
-    },
-    created: {
+    displayName: String,
+    email: String,
+    password: String,
+    createdAt: {
         type: Date,
         'default': Date.now
-    }
+    },
+    documents: [{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Document'
+    }]
 });
 
 userSchema.methods.setPassword = function(password, done) {

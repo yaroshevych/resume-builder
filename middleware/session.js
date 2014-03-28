@@ -19,7 +19,8 @@ exports.init = function(app) {
                 return done(null, false);
             }
 
-            user.password = null;
+            user.set('password', null);
+            user.set('documents', null);
             done(null, user);
         });
     });
@@ -43,6 +44,7 @@ exports.init = function(app) {
                     }
 
                     user.password = null;
+                    user.set('documents', null);
                     return done(null, user);
                 });
             });
