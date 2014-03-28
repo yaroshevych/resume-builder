@@ -15,7 +15,7 @@ App.DocumentsDocumentController = Ember.ObjectController.extend({
     },
 
     showError: function() {
-        this.controllerFor('index').set('errorMessage', 'Failed to save document');
+        this.get('controllers.index').set('errorMessage', 'Failed to save document');
         this.set('isSaving', false);
     }
 });

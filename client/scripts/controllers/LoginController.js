@@ -13,7 +13,7 @@ App.LoginController = Ember.Controller.extend({
             var request = $.post('/api/connection', this.getProperties('username', 'password'));
 
             request.done(_.bind(function(user) {
-                var model = this.controllerFor('application').content;
+                var model = this.get('controllers.application').content;
 
                 model.set('id', user._id);
                 model.setProperties(user);
