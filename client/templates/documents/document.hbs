@@ -1,7 +1,14 @@
 <div class="panel panel-default">
     <div class="panel-heading">
+        <button type="button" id="save-document-btn" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isNotDirty"}} style="float:right" data-style="zoom-in" data-spinner-size="25">
+            <span class="ladda-label"><i class="fa fa-floppy-o"></i></span>
+            <span class="ladda-spinner" data-size="xs"></span>
+            <div class="ladda-progress" style="width: 0px;"></div>
+        </button>
         <h3 class="panel-title">{{name}}</h3>
         <small class="text-muted">{{prettifyDate createdAt}}</small>
     </div>
-    <div class="panel-body">{{body}}</div>
+    <div class="panel-body">
+        {{view Ember.TextArea valueBinding="body" class="document-body"}}
+    </div>
 </div>
