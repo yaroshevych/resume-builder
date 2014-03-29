@@ -31,4 +31,16 @@ module.exports = function(app) {
             });
         });
     });
+
+    app.del('/api/documents/:id', session.isAuthenticated, function(req, res) {
+        mongoose.models.Document.findByIdAndRemove(req.params.id, function(err, rec) {
+            if (err) {
+                return res.json(400, {
+                    message: err + ''
+                });
+            }
+
+            res.send(204);
+        });
+    });
 };
