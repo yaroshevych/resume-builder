@@ -1,21 +1,20 @@
 'use strict';
 
 var mongoose = require('mongoose'),
+    timestamps = require('mongoose-timestamp'),
     bcrypt = require('bcrypt');
 
 var userSchema = new mongoose.Schema({
     displayName: String,
     email: String,
     password: String,
-    createdAt: {
-        type: Date,
-        'default': Date.now
-    },
     documents: [{
         type: mongoose.Schema.ObjectId,
         ref: 'Document'
     }]
 });
+
+userSchema.plugin(timestamps);
 
 userSchema.methods.setPassword = function(password, done) {
     var user = this;

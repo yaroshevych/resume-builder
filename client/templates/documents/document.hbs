@@ -11,4 +11,7 @@
     <div class="panel-body">
         {{view Ember.TextArea valueBinding="body" class="document-body"}}
     </div>
+    <div class="panel-body" style="padding-top:0">
+        <small class="text-muted">Updated at: {{prettifyDate updatedAt}}</small>
+    </div>
 </div>
