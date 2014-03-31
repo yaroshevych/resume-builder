@@ -13,6 +13,16 @@ module.exports = function(app) {
         mongoose.models.Document.find({}, utils.errorHandler(res, sendResult));
     });
 
+    app.post('/api/documents', session.isAuthenticated, function(req, res) {
+            var sendResult = function(rec) {
+                res.json({
+                    document: rec
+                });
+            };
+
+        mongoose.models.Document.create(req.body.document, utils.errorHandler(res, sendResult));
+    });
+
     app.put('/api/documents/:id', session.isAuthenticated, function(req, res) {
         var updateDoc = function(rec) {
             if (!rec) {

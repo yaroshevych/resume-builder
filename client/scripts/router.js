@@ -8,8 +8,10 @@ App.Router.map(function() {
     }, function() {
         this.resource('documents', function() {
             this.route('document', {
-                path: '/document/:id'
+                path: '/:id'
             });
+
+            this.route('add');
         });
 
         this.route('about');

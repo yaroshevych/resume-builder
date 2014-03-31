@@ -1,9 +1,20 @@
+@font-face {
+    font-family: HaloHandletter;
+    src: url("HaloHandletter.otf") format("opentype");
+}
+
 .ember-view {
     .nav {
         .active, .active:hover, .active:focus {
             color: #555;
             background-color: #e7e7e7;
         }
+    }
+
+    .document-name-field {
+        width: 80%;
+        margin-top: 6px;
+        margin-bottom: 5px;
     }
 
     .document-body {
@@ -21,5 +32,15 @@
         margin-bottom: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+    }
+
+    .empty-message {
+        font-family: HaloHandletter;
+        font-size: 50px;
+        color: #555555;
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 }
