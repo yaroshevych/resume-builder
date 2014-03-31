@@ -31,3 +31,5 @@ client/styles/main.css
 client/styles/main.css.map
 
 *.sublime*
+
+app.log*
