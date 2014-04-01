@@ -2,7 +2,21 @@
 App.DocumentsDocumentView = Ember.View.extend({
     didInsertElement: function() {
         this.initSaveSpinner();
+        $('.document-body').markdown({
+            iconlibrary: 'fa'
+        });
     },
+
+    contentChanged: function() {
+        if ($('.document-body').length) {
+            $('.document-body').markdown();
+            var md = $('.document-body').data('markdown');
+
+            md.setContent(this.get('controller.content.body'));
+            md.hidePreview();
+            md.showPreview();
+        }
+    }.observes('controller.content'),
 
     initSaveSpinner: function() {
         var spinner = Ladda.create($('#save-document-btn')[0]);
@@ -20,8 +34,8 @@ App.DocumentsDocumentView = Ember.View.extend({
         if ($(e.target).hasClass('delete-doc')) {
             var confirm = $(e.target).popover({
                 html: true,
-                content: '<div>Are you sure you want to delete this document?</div>'+
-                '<div style="padding-top:10px"><button type="button" class="btn btn-danger btn-block delete-doc-confirm">Delete</button></div>',
+                content: '<div>Are you sure you want to delete this document?</div>' +
+                    '<div style="padding-top:10px"><button type="button" class="btn btn-danger btn-block delete-doc-confirm">Delete</button></div>',
                 trigger: 'manual',
                 placement: 'top'
             });

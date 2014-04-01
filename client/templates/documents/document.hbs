@@ -1,18 +1,16 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <button type="button" id="save-document-btn" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isNotDirty"}} style="float:right" data-style="zoom-in" data-spinner-size="25">
-            <span class="ladda-label"><i class="fa fa-floppy-o"></i></span>
-            <span class="ladda-spinner" data-size="xs"></span>
-            <div class="ladda-progress" style="width: 0px;"></div>
-        </button>
-        <h3 class="panel-title">{{name}}</h3>
-        <small class="text-muted">{{prettifyDate createdAt}}</small>
-    </div>
-    <div class="panel-body">
-        {{view Ember.TextArea valueBinding="body" class="document-body"}}
-    </div>
-    <div class="panel-body" style="padding-top:0">
-        <a href="#" style="float:right" class="delete-doc">Delete</a>
-        <small class="text-muted">Updated at: {{prettifyDate updatedAt}}</small>
-    </div>
+<div class="document-header">
+    <button type="button" id="save-document-btn" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isNotDirty"}} style="float:right" data-style="zoom-in" data-spinner-size="25">
+        <span class="ladda-label"><i class="fa fa-floppy-o"></i></span>
+        <span class="ladda-spinner" data-size="xs"></span>
+        <div class="ladda-progress" style="width: 0px;"></div>
+    </button>
+    <h3 class="panel-title">{{name}}</h3>
+    <small class="text-muted">{{prettifyDate createdAt}}</small>
+</div>
+
+{{view Ember.TextArea valueBinding="body" class="document-body" data-provide="markdown"}}
+
+<div class="document-footer">
+    <a href="#" style="float:right" class="delete-doc">Delete</a>
+    <small class="text-muted">Updated at: {{prettifyDate updatedAt}}</small>
 </div>
