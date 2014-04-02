@@ -2,13 +2,24 @@
 
 var mongoose = require('mongoose'),
     timestamps = require('mongoose-timestamp'),
-    schema = new mongoose.Schema({
-        name: String,
+    comment = new mongoose.Schema({
         body: String,
+        authorName: String,
         author: {
             type: mongoose.Schema.ObjectId,
             ref: 'User'
-        }
+        },
+        createdAt: Date
+    }),
+    schema = new mongoose.Schema({
+        name: String,
+        body: String,
+        authorName: String,
+        author: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'User'
+        },
+        comments: [comment]
     });
 
 schema.plugin(timestamps);
