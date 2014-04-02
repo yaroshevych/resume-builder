@@ -1,3 +1,4 @@
+<div class="document">
 <div class="document-header">
     <button type="button" id="save-document-btn" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isNotDirty"}} style="float:right" data-style="zoom-in" data-spinner-size="25">
         <span class="ladda-label"><i class="fa fa-floppy-o"></i></span>
@@ -13,4 +14,17 @@
 <div class="document-footer">
     <a href="#" style="float:right" class="delete-doc">Delete</a>
     <small class="text-muted">Updated at: {{prettifyDate updatedAt}}</small>
+</div>
+
+{{#if comments.length}}
+<h4>Comments</h4>
+<ul class="list-group">
+    {{#each comments}}
+    <li class="list-group-item">
+        <div>{{body}}</div>
+        <div><small class="text-muted">{{authorName}} at {{prettifyDate createdAt}}</small></div>
+    </li>
+    {{/each}}
+</ul>
+{{/if}}
 </div>
