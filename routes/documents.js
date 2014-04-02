@@ -12,8 +12,27 @@ var session = require('../middleware/session'),
 module.exports = function(app) {
     app.get('/api/documents', session.isAuthenticated, function(req, res) {
         var sendResult = function(records) {
+            var documents = [],
+                comments = [],
+                ids;
+
+            for (var i = 0; i < records.length; i++) {
+                ids = [];
+
+                var doc = records[i].toJSON();
+
+                for (var k = 0; k < records[i].comments.length; k++) {
+                    comments.push(doc.comments[k]);
+                    ids.push(doc.comments[k]._id + '');
+                }
+
+                doc.comments = ids;
+                documents.push(doc);
+            }
+
             res.json({
-                documents: records
+                documents: documents,
+                comments: comments
             });
         };
 
