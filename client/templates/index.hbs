@@ -12,7 +12,8 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>{{#link-to 'documents'}}Documents{{/link-to}}</li>
-                <li>{{#link-to 'index.profile'}}{{email}}{{/link-to}}</li>
+                <li>{{#link-to 'users'}}Users{{/link-to}}</li>
+                <li>{{#link-to 'index.profile'}}{{profile.email}}{{/link-to}}</li>
                 <li>{{#link-to 'index.about'}}About{{/link-to}}</li>
                 <li><a href="#" {{action 'logout'}} class="ladda-button" data-style="zoom-in" id="logout-btn" data-spinner-color="#777777" data-spinner-size="25">
                     <span class="ladda-label">Logout</span>

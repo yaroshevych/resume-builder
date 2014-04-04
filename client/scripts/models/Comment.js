@@ -2,6 +2,7 @@ App.Comment = DS.Model.extend({
     body: DS.attr('string'),
     authorName: DS.attr('string'),
     createdAt: DS.attr('date'),
+    author: DS.belongsTo('user'),
     documentId: '' // CHECK THAT THIS IS CORRECT
 });
 

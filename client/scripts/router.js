@@ -16,6 +16,12 @@ App.Router.map(function() {
             this.route('add');
         });
 
+        this.resource('users', function() {
+            this.route('user', {
+                path: '/:id'
+            });
+        });
+
         this.route('about');
         this.route('profile');
     });

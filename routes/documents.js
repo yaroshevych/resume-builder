@@ -42,7 +42,17 @@ module.exports = function(app) {
             });
         };
 
-        mongoose.models.Document.find({}, utils.errorHandler(res, sendResult));
+        var options = {};
+
+        if (req.query.ids) {
+            options = {
+                _id: {
+                    $in: req.query.ids
+                }
+            };
+        }
+
+        mongoose.models.Document.find(options, utils.errorHandler(res, sendResult));
     });
 
     app.post('/api/documents', session.isAuthenticated, function(req, res) {

@@ -1,0 +1,9 @@
+<div class="list-group">
+    {{#if content.documents.length}}
+        {{#each content.documents}}
+            {{#link-to 'document' this class='list-group-item'}}{{name}}{{/link-to}}
+        {{/each}}
+    {{else}}
+        <div class="empty-message">User has no documents.</div>
+    {{/if}}
+</div>
