@@ -11,6 +11,6 @@ App.DocumentsAddController = App.DocumentController.extend({
 
     documentAdded: function() {
         this.hideSaveLoading();
-        this.transitionToRoute('documents.document', this.get('content'));
+        this.transitionToRoute('document', this.get('content'));
     }
 });
