@@ -21,13 +21,11 @@
 {{#if comments.length}}
 <ul class="list-group">
     {{#each comments}}
-    {{!-- {{#unless isDirty}} --}}
     <li class="list-group-item">
         <a href="#" class="comment-delete-btn" {{action "removeComment" id}}>×</a>
         <div>{{body}}</div>
         <div><small class="text-muted">{{authorName}} at {{prettifyDate createdAt}}</small></div>
     </li>
-    {{!-- {{/unless}} --}}
     {{/each}}
 </ul>
 {{/if}}
