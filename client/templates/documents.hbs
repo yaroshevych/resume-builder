@@ -1,7 +1,9 @@
 <div class="row">
     <div class="col-md-4">
+        {{view Ember.TextField valueBinding="nameFilter" class="documents-filter-field form-control" placeholder="Filter documents by name" }}
+
         <div class="list-group">
-            {{#each controller}}
+            {{#each controller.filteredContent}}
                 {{#link-to 'document' this class="list-group-item"}}{{name}}{{/link-to}}
             {{/each}}
         </div>
