@@ -1,5 +1,3 @@
-// App.DocumentsDocumentController = Ember.ObjectController.extend();
-
 App.DocumentController = Ember.ObjectController.extend({
     needs: ['index'],
     isNotDirty: Ember.computed.not('content.isDirty'),
