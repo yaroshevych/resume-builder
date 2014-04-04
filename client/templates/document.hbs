@@ -24,7 +24,7 @@
     <li class="list-group-item">
         <a href="#" class="comment-delete-btn" {{action "removeComment" id}}>×</a>
         <div>{{body}}</div>
-        <div><small class="text-muted">{{authorName}} at {{prettifyDate createdAt}}</small></div>
+        <div><small class="text-muted">{{#link-to 'users.user' this.author}}{{authorName}}{{/link-to}} at {{prettifyDate createdAt}}</small></div>
     </li>
     {{/each}}
 </ul>
