@@ -1,4 +1,6 @@
-App.DocumentsDocumentController = Ember.ObjectController.extend({
+// App.DocumentsDocumentController = Ember.ObjectController.extend();
+
+App.DocumentController = Ember.ObjectController.extend({
     needs: ['index'],
     isNotDirty: Ember.computed.not('content.isDirty'),
     isSaving: false,
@@ -14,8 +16,18 @@ App.DocumentsDocumentController = Ember.ObjectController.extend({
             this.get('controllers.index').set('errorMessage', null);
             this.get('content').destroyRecord().then(function() {}, _.bind(this.showError, this, 'Failed to delete document'));
             this.transitionToRoute('documents');
-            // TODO: handle errors
+        },
+
+        removeComment: function(commentId) {
+            var comment = this.get('comments').findBy('id', commentId);
+            comment.set('documentId', this.get('content.id'));
+
+            comment.destroyRecord().then(_.bind(this.commentDeleted, this, comment), _.bind(this.showError, this, 'Failed to delete comment'));
         }
+    },
+
+    commentDeleted: function (comment) {
+        this.get('comments').removeObject(comment); // this is needed for newly created comments. looks like a bug in ember data
     },
 
     hideSaveLoading: function() {
@@ -27,4 +39,3 @@ App.DocumentsDocumentController = Ember.ObjectController.extend({
         this.set('isSaving', false);
     }
 });
-

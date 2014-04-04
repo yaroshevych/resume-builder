@@ -14,7 +14,7 @@ App.ApplicationRoute = Ember.Route.extend({
 
                 request.fail(_.bind(function() {
                     resolve(model);
-                    this.transitionTo('login');
+                    this.transitionToRoute('login');
                 }, this));
             }, this));
         }

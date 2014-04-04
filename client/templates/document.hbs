@@ -16,15 +16,21 @@
     <small class="text-muted">Updated at: {{prettifyDate updatedAt}}</small>
 </div>
 
-{{#if comments.length}}
 <h4>Comments</h4>
+
+{{#if comments.length}}
 <ul class="list-group">
     {{#each comments}}
+    {{!-- {{#unless isDirty}} --}}
     <li class="list-group-item">
+        <a href="#" class="comment-delete-btn" {{action "removeComment" id}}>×</a>
         <div>{{body}}</div>
         <div><small class="text-muted">{{authorName}} at {{prettifyDate createdAt}}</small></div>
     </li>
+    {{!-- {{/unless}} --}}
     {{/each}}
 </ul>
 {{/if}}
+
+{{outlet}}
 </div>

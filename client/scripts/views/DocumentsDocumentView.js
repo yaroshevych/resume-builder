@@ -1,5 +1,5 @@
 /*global Ladda*/
-App.DocumentsDocumentView = Ember.View.extend({
+App.DocumentView = Ember.View.extend({
     didInsertElement: function() {
         this.initSaveSpinner();
         $('.document-body').markdown({

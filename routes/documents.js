@@ -3,8 +3,14 @@ var session = require('../middleware/session'),
     utils = require('../utils'),
     sendDocument = function(res) {
         return function(rec) {
+            var data = rec.toJSON();
+
+            for (var i = 0; i < data.comments.length; i++) {
+                data.comments[i] = data.comments[i]._id;
+            }
+
             res.json({
-                document: rec
+                document: data
             });
         };
     };
@@ -66,18 +72,24 @@ module.exports = function(app) {
 
     app.post('/api/documents/:id/comments', session.isAuthenticated, function(req, res) {
         var updateDoc = function(rec) {
+            var sendData = function(doc) {
+                res.json({
+                    comment: rec.comments[rec.comments.length - 1]
+                });
+            };
+
             if (!rec) {
                 return res.json(404);
             }
 
             rec.comments.push({
-                body: req.body.body,
+                body: req.body.comment.body,
                 authorName: req.user.displayName,
                 author: req.user.id,
                 createdAt: new Date()
             });
 
-            rec.save(utils.errorHandler(res, sendDocument(res)));
+            rec.save(utils.errorHandler(res, sendData));
         };
 
         mongoose.models.Document.findById(req.params.id, utils.errorHandler(res, updateDoc));

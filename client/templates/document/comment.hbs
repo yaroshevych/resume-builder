@@ -1,0 +1,29 @@
+{{#if errorMessage}}
+<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" aria-hidden="true" {{action 'dismissErrorMessage'}}>&times;</button>
+    {{errorMessage}}
+</div>
+{{/if}}
+
+
+<div class="comment-field-wrap">
+    {{view Ember.TextField valueBinding="body" class="comment-field" disabledBinding="isSaving"}}
+</div>
+{{!--
+<button type="button" id="save-comment-btn" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isSaving"}} {{bind-attr disabled="isNotDirty"}} data-style="zoom-in" data-spinner-size="25">
+    <span class="ladda-label"><i class="fa fa-floppy-o"></i></span>
+    <span class="ladda-spinner" data-size="xs"></span>
+    <div class="ladda-progress" style="width: 0px;"></div>
+</button>
+ --}}
+<div class="comment-save-btn-wrap">
+    <button type="submit" class="btn btn-primary ladda-button" {{action "save"}} {{bind-attr disabled="isSaving"}} {{bind-attr disabled="isNotDirty"}} id="save-comment-btn" data-style="expand-left" data-spinner-color="#f2f2f2" data-spinner-size="25">
+        <span class="ladda-label">Save comment</span>
+        <span class="ladda-spinner" data-size="xs"></span>
+        <div class="ladda-progress" style="width: 0px;"></div>
+    </button>
+
+    {{#unless isSaving}}
+        {{#link-to 'document' class="comment-cancel-btn"}}Cancel{{/link-to}}
+    {{/unless}}
+</div>

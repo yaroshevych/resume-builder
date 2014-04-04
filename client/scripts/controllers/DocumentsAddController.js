@@ -1,6 +1,6 @@
 require('scripts/controllers/DocumentsDocumentController');
 
-App.DocumentsAddController = App.DocumentsDocumentController.extend({
+App.DocumentsAddController = App.DocumentController.extend({
     actions: {
         save: function() {
             this.get('controllers.index').set('errorMessage', null);

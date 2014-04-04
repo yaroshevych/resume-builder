@@ -7,8 +7,10 @@ App.Router.map(function() {
         path: '/'
     }, function() {
         this.resource('documents', function() {
-            this.route('document', {
+            this.resource('document', {
                 path: '/:id'
+            }, function() {
+                this.route('comment');
             });
 
             this.route('add');
