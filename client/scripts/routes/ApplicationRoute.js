@@ -4,17 +4,24 @@ App.ApplicationRoute = Ember.Route.extend({
     model: function() {
         if (!this.promise) {
             this.promise = new Ember.RSVP.Promise(_.bind(function(resolve, reject) {
-                var request = $.getJSON('/api/connection'),
-                    model = this.store.createRecord('user');
+                var request = $.getJSON('/api/connection');
 
                 request.done(_.bind(function(user) {
-                    model.setProperties(user);
-                    resolve(model);
+                    this.store.pushPayload('user', {
+                        users: [user]
+                    });
+
+                    resolve(Ember.Object.create({
+                        profile: this.store.find('user', user.id)
+                    }));
                 }, this));
 
                 request.fail(_.bind(function() {
-                    resolve(model);
-                    this.transitionToRoute('login');
+                    resolve(Ember.Object.create({
+                        profile: null
+                    }));
+
+                    this.transitionTo('login');
                 }, this));
             }, this));
         }

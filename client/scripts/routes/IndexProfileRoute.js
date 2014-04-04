@@ -1,5 +1,5 @@
 App.IndexProfileRoute = Ember.Route.extend({
     model: function() {
-        return this.modelFor('application');
+        return this.modelFor('application').get('profile');
     }
 });
