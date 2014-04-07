@@ -28,8 +28,7 @@ App.DocumentsController = Ember.ArrayController.extend({
 
     paginationTotal: function() {
         if (this.get('model.isLoaded')) {
-            var modelType = this.get('model.type');
-            return this.get('store').typeMapFor(modelType).metadata.pagination.total;
+            return +this.get('model.meta.pagination.total');
         }
     }.property('model.isLoaded')
 });
