@@ -5,6 +5,7 @@ App.DocumentView = Ember.View.extend({
         $('.document-body').markdown({
             iconlibrary: 'fa'
         });
+        this.contentChanged();
     },
 
     contentChanged: function() {
