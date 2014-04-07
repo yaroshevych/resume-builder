@@ -1,5 +1,17 @@
 App.DocumentsController = Ember.ArrayController.extend({
+    queryParams: ['offset', 'limit'],
     nameFilter: '',
+
+    actions: {
+        page: function(page) {
+            this.transitionToRoute('documents', {
+                queryParams: {
+                    offset: (page - 1) * 10,
+                    limit: 10
+                }
+            });
+        }
+    },
 
     filteredContent: function() {
         var content = this.get('content'),
@@ -12,5 +24,12 @@ App.DocumentsController = Ember.ArrayController.extend({
         } else {
             return content;
         }
-    }.property('content', 'nameFilter')
+    }.property('content', 'nameFilter'),
+
+    paginationTotal: function() {
+        if (this.get('model.isLoaded')) {
+            var modelType = this.get('model.type');
+            return this.get('store').typeMapFor(modelType).metadata.pagination.total;
+        }
+    }.property('model.isLoaded')
 });

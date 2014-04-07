@@ -17,30 +17,36 @@ var session = require('../middleware/session'),
 
 module.exports = function(app) {
     app.get('/api/documents', session.isAuthenticated, function(req, res) {
-        var sendResult = function(records) {
-            var documents = [],
-                comments = [],
-                ids;
+        var total = 0,
+            sendResult = function(records) {
+                var documents = [],
+                    comments = [],
+                    ids;
 
-            for (var i = 0; i < records.length; i++) {
-                ids = [];
+                for (var i = 0; i < records.length; i++) {
+                    ids = [];
 
-                var doc = records[i].toJSON();
+                    var doc = records[i].toJSON();
 
-                for (var k = 0; k < records[i].comments.length; k++) {
-                    comments.push(doc.comments[k]);
-                    ids.push(doc.comments[k]._id + '');
+                    for (var k = 0; k < records[i].comments.length; k++) {
+                        comments.push(doc.comments[k]);
+                        ids.push(doc.comments[k]._id + '');
+                    }
+
+                    doc.comments = ids;
+                    documents.push(doc);
                 }
 
-                doc.comments = ids;
-                documents.push(doc);
-            }
-
-            res.json({
-                documents: documents,
-                comments: comments
-            });
-        };
+                res.json({
+                    documents: documents,
+                    comments: comments,
+                    meta: {
+                        pagination: {
+                            total: total
+                        }
+                    }
+                });
+            };
 
         var options = {};
 
@@ -52,7 +58,17 @@ module.exports = function(app) {
             };
         }
 
-        mongoose.models.Document.find(options, utils.errorHandler(res, sendResult));
+        mongoose.models.Document.count(options, utils.errorHandler(res, function(count) {
+            total = count;
+
+            mongoose.models.Document.find(options, null, {
+                sort: {
+                    createdAt: 1
+                },
+                skip: +req.query.offset || 0,
+                limit: +req.query.limit || 1000
+            }, utils.errorHandler(res, sendResult));
+        }));
     });
 
     app.post('/api/documents', session.isAuthenticated, function(req, res) {
