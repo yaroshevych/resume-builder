@@ -24,7 +24,7 @@ App.DocumentsRoute = Ember.Route.extend({
             transition.queryParams.offset = 0;
         }
 
-        if (!transition.queryParams.name) {
+        if (!transition.queryParams.name || transition.queryParams.name === 'undefined') {
             transition.queryParams.name = '';
         }
 
