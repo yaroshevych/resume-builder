@@ -3,7 +3,7 @@
         {{view Ember.TextField valueBinding="nameFilter" class="documents-filter-field form-control" placeholder="Filter documents by name" }}
 
         <div class="list-group">
-            {{#each controller.filteredContent}}
+            {{#each controller.content}}
                 {{#link-to 'document' this class="list-group-item"}}{{name}}{{/link-to}}
             {{/each}}
 

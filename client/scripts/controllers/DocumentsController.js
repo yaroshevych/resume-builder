@@ -1,6 +1,7 @@
 App.DocumentsController = Ember.ArrayController.extend({
-    queryParams: ['offset', 'limit'],
+    queryParams: ['offset', 'limit', 'name'],
     nameFilter: '',
+    updateRouteTimer: null,
 
     actions: {
         page: function(page) {
@@ -13,22 +14,16 @@ App.DocumentsController = Ember.ArrayController.extend({
         }
     },
 
-    filteredContent: function() {
-        var content = this.get('content'),
-            nameFilter = this.get('nameFilter').toLowerCase();
+    filterByName: function() {
+        clearTimeout(this.updateRouteTimer);
+        this.updateRouteTimer = setTimeout(_.bind(this.updateRoute, this), 500);
+    }.observes('nameFilter'),
 
-        if (nameFilter) {
-            return content.filter(function(item) {
-                return (item.get('name') || '').toLowerCase().indexOf(nameFilter) !== -1;
-            });
-        } else {
-            return content;
-        }
-    }.property('content', 'nameFilter'),
-
-    paginationTotal: function() {
-        if (this.get('model.isLoaded')) {
-            return +this.get('model.meta.pagination.total');
-        }
-    }.property('model.isLoaded')
+    updateRoute: function() {
+        this.transitionToRoute('documents', {
+            queryParams: {
+                name: this.get('nameFilter')
+            }
+        });
+    }
 });

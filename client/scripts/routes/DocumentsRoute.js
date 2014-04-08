@@ -5,6 +5,9 @@ App.DocumentsRoute = Ember.Route.extend({
         },
         limit: {
             refreshModel: true
+        },
+        name: {
+            refreshModel: true
         }
     },
 
@@ -13,16 +16,20 @@ App.DocumentsRoute = Ember.Route.extend({
     },
 
     beforeModel: function(transition) {
-        var offset = +transition.queryParams.offset,
-            limit = +transition.queryParams.limit;
-
-        if (!limit || !offset) {
-            this.transitionTo('documents', {
-                queryParams: {
-                    offset: 0,
-                    limit: 10
-                }
-            });
+        if (!parseInt(transition.queryParams.limit, 0)) {
+            transition.queryParams.limit = 10;
         }
+
+        if (!parseInt(transition.queryParams.offset, 0)) {
+            transition.queryParams.offset = 0;
+        }
+
+        if (!transition.queryParams.name) {
+            transition.queryParams.name = '';
+        }
+
+        this.transitionTo('documents', {
+            queryParams: transition.queryParams
+        });
     }
 });

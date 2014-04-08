@@ -51,11 +51,13 @@ module.exports = function(app) {
         var options = {};
 
         if (req.query.ids) {
-            options = {
-                _id: {
-                    $in: req.query.ids
-                }
+            options._id = {
+                $in: req.query.ids
             };
+        }
+
+        if (req.query.name) {
+            options.name = new RegExp(req.query.name, 'i');
         }
 
         mongoose.models.Document.count(options, utils.errorHandler(res, function(count) {
