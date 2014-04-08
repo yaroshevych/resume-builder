@@ -83,6 +83,7 @@ module.exports = function(app) {
                 return res.json(404);
             }
 
+            delete req.body.document.comments;
             rec.set(req.body.document);
             rec.save(utils.errorHandler(res, sendDocument(res)));
         };
