@@ -1,4 +1,6 @@
 App.DocumentsRoute = Ember.Route.extend({
+    needs: ['application'],
+
     queryParams: {
         offset: {
             refreshModel: true
@@ -16,20 +18,22 @@ App.DocumentsRoute = Ember.Route.extend({
     },
 
     beforeModel: function(transition) {
-        if (!parseInt(transition.queryParams.limit, 0)) {
-            transition.queryParams.limit = 10;
-        }
+        if (transition.targetName === 'documents.index') {
+            if (!parseInt(transition.queryParams.limit, 0)) {
+                transition.queryParams.limit = 10;
+            }
 
-        if (!parseInt(transition.queryParams.offset, 0)) {
-            transition.queryParams.offset = 0;
-        }
+            if (!parseInt(transition.queryParams.offset, 0)) {
+                transition.queryParams.offset = 0;
+            }
 
-        if (!transition.queryParams.name || transition.queryParams.name === 'undefined') {
-            transition.queryParams.name = '';
-        }
+            if (!transition.queryParams.name || transition.queryParams.name === 'undefined') {
+                transition.queryParams.name = '';
+            }
 
-        this.transitionTo('documents', {
-            queryParams: transition.queryParams
-        });
+            this.transitionTo('documents', {
+                queryParams: transition.queryParams
+            });
+        }
     }
 });
