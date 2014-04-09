@@ -325,6 +325,15 @@ module.exports = function(grunt) {
                 },
                 src: '<%= yeoman.app %>/scripts/app.js',
                 dest: '.tmp/scripts/app.js'
+            },
+            test: {
+                options: {
+                    filepathTransform: function(filepath) {
+                        return yeomanConfig.app + '/' + filepath;
+                    }
+                },
+                src: '<%= yeoman.app %>/tests/tests.js',
+                dest: '.tmp/tests/tests.js'
             }
         },
         // Express Config
@@ -335,6 +344,17 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     script: 'app.js'
+                }
+            }
+        },
+        testem: {
+            basic: {
+                src: ['.tmp/tests/tests.js'],
+                options: {
+                    parallel: 2,
+                    framework: 'jasmine2',
+                    launch_in_dev: ['PhantomJS'],
+                    launch_in_ci: ['PhantomJS']
                 }
             }
         }
@@ -349,7 +369,7 @@ module.exports = function(grunt) {
             'clean:server',
             // 'coffee',
             'emberTemplates',
-            'neuter',
+            'neuter:app',
             'less',
             'copy:server',
             // 'connect:livereload',
@@ -376,7 +396,7 @@ module.exports = function(grunt) {
         'clean:server',
         // 'coffee',
         'emberTemplates',
-        'neuter',
+        'neuter:app',
         'less',
         'copy:server',
         // 'connect:livereload',
@@ -392,7 +412,7 @@ module.exports = function(grunt) {
         'concurrent',
         'emberTemplates',
         'cssmin',
-        'neuter',
+        'neuter:app',
         'concat',
         'uglify',
         'copy',
@@ -404,5 +424,14 @@ module.exports = function(grunt) {
         // 'jshint',
         // 'test',
         'build'
+    ]);
+
+    grunt.registerTask('test', [
+        'clean:server',
+        'emberTemplates',
+        'neuter:app',
+        'neuter:test',
+        'copy:server',
+        'testem:ci:basic'
     ]);
 };

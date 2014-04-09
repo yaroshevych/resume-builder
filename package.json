@@ -29,6 +29,7 @@
     "grunt-contrib-less": "~0.8.1",
     "grunt-contrib-imagemin": "0.1.4",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-testem": "*",
     "grunt-ember-templates": "0.4.14",
     "grunt-express-server": "~0.4.2",
     "grunt-rev": "~0.1.0",
