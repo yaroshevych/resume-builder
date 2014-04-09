@@ -1,0 +1,11 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git/*",
+    ".tmp/*",
+    "dist/*",
+    "logs/*",
+    "node_modules/*",
+    "client/*"
+  ]
+}
