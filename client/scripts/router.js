@@ -28,3 +28,12 @@ App.Router.map(function() {
 
     this.route('login');
 });
+
+// add login handler to all routers
+Ember.Route.reopen({
+    redirect: function() {
+        if (!this.modelFor('application').get('profile')) {
+            this.transitionTo('login');
+        }
+    }
+});
