@@ -32,7 +32,11 @@ App.Router.map(function() {
 // add login handler to all routers
 Ember.Route.reopen({
     redirect: function() {
-        if (!this.modelFor('application').get('profile')) {
+        if (this.routeName === 'login') {
+            if (this.modelFor('application').get('profile')) {
+                this.transitionTo('index');
+            }
+        } else if (!this.modelFor('application').get('profile')) {
             this.transitionTo('login');
         }
     }
