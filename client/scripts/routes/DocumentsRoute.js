@@ -14,6 +14,10 @@ App.DocumentsRoute = Ember.Route.extend({
     },
 
     model: function(params) {
+        if (App.testing) {
+            return [];
+        }
+
         return this.store.find('document', params);
     },
 

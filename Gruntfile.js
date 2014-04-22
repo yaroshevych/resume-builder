@@ -1,4 +1,3 @@
-// Generated on 2014-03-21 using generator-bootstrap-less 3.2.0
 'use strict';
 
 // # Globbing
@@ -31,8 +30,8 @@ module.exports = function(grunt) {
                 tasks: ['emberTemplates']
             },
             neuter: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['neuter']
+                files: ['<%= yeoman.app %>/scripts/{,*/}*.js','<%= yeoman.app %>/tests/{,*/}*.js'],
+                tasks: ['neuter:app', 'neuter:test']
             },
             // coffee: {
             //     files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
@@ -349,10 +348,46 @@ module.exports = function(grunt) {
         },
         testem: {
             basic: {
-                src: ['.tmp/tests/tests.js'],
+                src: [
+                    'client/bower_components/jquery/dist/jquery.js',
+                    'client/bower_components/handlebars/handlebars.runtime.js',
+                    'client/bower_components/ember/ember.js',
+                    'client/bower_components/ember-data/ember-data.js',
+                    'client/bower_components/lodash/dist/lodash.js',
+
+                    'client/bower_components/bootstrap/js/affix.js',
+                    'client/bower_components/bootstrap/js/alert.js',
+                    'client/bower_components/bootstrap/js/dropdown.js',
+                    'client/bower_components/bootstrap/js/tooltip.js',
+                    'client/bower_components/bootstrap/js/modal.js',
+                    'client/bower_components/bootstrap/js/transition.js',
+                    'client/bower_components/bootstrap/js/button.js',
+                    'client/bower_components/bootstrap/js/popover.js',
+                    'client/bower_components/bootstrap/js/carousel.js',
+                    'client/bower_components/bootstrap/js/scrollspy.js',
+                    'client/bower_components/bootstrap/js/collapse.js',
+                    'client/bower_components/bootstrap/js/tab.js',
+
+                    'client/bower_components/ladda/js/spin.js',
+                    'client/bower_components/ladda/js/ladda.js',
+
+                    'client/bower_components/moment/moment.js',
+
+                    'client/bower_components/to-markdown/src/to-markdown.js',
+                    'client/bower_components/markdown/lib/markdown.js',
+                    'client/bower_components/bootstrap-markdown/js/bootstrap-markdown.js',
+                    'client/bower_components/jquery-bootpag/lib/jquery.bootpag.js',
+
+                    'client/bower_components/ember-qunit/dist/globals/main.js',
+
+                    '.tmp/scripts/app.js',
+                    '.tmp/scripts/templates.js',
+
+                    '.tmp/tests/tests.js'
+                ],
                 options: {
                     parallel: 2,
-                    framework: 'jasmine2',
+                    framework: 'qunit',
                     launch_in_dev: ['PhantomJS'],
                     launch_in_ci: ['PhantomJS']
                 }
@@ -397,6 +432,7 @@ module.exports = function(grunt) {
         // 'coffee',
         'emberTemplates',
         'neuter:app',
+        'neuter:test',
         'less',
         'copy:server',
         // 'connect:livereload',

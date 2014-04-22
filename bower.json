@@ -1,24 +1,25 @@
 {
-  "name": "resume-builder",
-  "version": "0.0.0",
-  "dependencies": {
-    "bootstrap": "3.1",
-    "font-awesome": "~4.0.0",
-    "modernizr": "~2.6.2",
-    "jquery": "2.1",
-    "ember": "canary",
-    "ember-data": "1",
-    "lodash": "~2.4.1",
-    "ladda": "~0.9.2",
-    "moment": "~2.5.1",
-    "bootstrap-markdown": "~2.3.1",
-    "to-markdown": "*",
-    "markdown": "~0.5.0",
-    "jquery-bootpag": "~1.0.5",
-    "grunt-contrib-testem": "*"
-  },
-  "devDependencies": {},
-  "resolutions": {
-    "jquery": "2.1"
-  }
+    "name": "resume-builder",
+    "version": "0.0.0",
+    "dependencies": {
+        "bootstrap": "3.1",
+        "font-awesome": "~4.0.0",
+        "modernizr": "~2.6.2",
+        "jquery": "2.1",
+        "ember": "canary",
+        "ember-data": "1",
+        "lodash": "~2.4.1",
+        "ladda": "~0.9.2",
+        "moment": "~2.5.1",
+        "bootstrap-markdown": "~2.3.1",
+        "to-markdown": "*",
+        "markdown": "~0.5.0",
+        "jquery-bootpag": "~1.0.5"
+    },
+    "devDependencies": {
+        "ember-qunit": "master"
+    },
+    "resolutions": {
+        "jquery": "2.1"
+    }
 }

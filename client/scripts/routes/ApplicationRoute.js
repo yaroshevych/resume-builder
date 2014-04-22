@@ -4,6 +4,16 @@ App.ApplicationRoute = Ember.Route.extend({
     model: function() {
         if (!this.promise) {
             this.promise = new Ember.RSVP.Promise(_.bind(function(resolve, reject) {
+                if (App.testing) {
+                    resolve(Ember.Object.create({
+                        profile: null
+                    }));
+
+                    this.transitionTo('login');
+                    this.controllerFor('login').on('login', this, this.onLogin);
+                    return;
+                }
+
                 var request = $.getJSON('/api/connection');
 
                 request.done(_.bind(function(user) {
