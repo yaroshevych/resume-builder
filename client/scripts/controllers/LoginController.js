@@ -1,5 +1,4 @@
-App.LoginController = Ember.Controller.extend({
-    needs: ['application'],
+App.LoginController = Ember.Controller.extend(Ember.Evented, {
     loginFailed: false,
     isProcessing: false,
 
@@ -10,23 +9,14 @@ App.LoginController = Ember.Controller.extend({
                 isProcessing: true
             });
 
-            var request = $.post('/api/connection', this.getProperties('username', 'password'));
-
-            request.done(_.bind(function(user) {
-                this.store.pushPayload('user', {
-                    users: [user]
-                });
-
-                this.set('controllers.application.content.profile', this.store.find('user', user.id));
-                this.transitionToRoute('index');
-            }, this));
-
-            request.fail(_.bind(function() {
-                this.setProperties({
-                    loginFailed: true,
-                    isProcessing: false
-                });
-            }, this));
+            this.trigger('login', this.getProperties('username', 'password'), _.bind(this.onLoginFail, this));
         }
+    },
+
+    onLoginFail: function() {
+        this.setProperties({
+            loginFailed: true,
+            isProcessing: false
+        });
     }
 });

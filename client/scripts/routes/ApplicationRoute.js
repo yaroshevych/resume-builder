@@ -22,10 +22,26 @@ App.ApplicationRoute = Ember.Route.extend({
                     }));
 
                     this.transitionTo('login');
+                    this.controllerFor('login').on('login', this, this.onLogin);
                 }, this));
             }, this));
         }
 
         return this.promise;
+    },
+
+    onLogin: function(credentials, loginFailed) {
+        var request = $.post('/api/connection', credentials);
+        request.done(_.bind(this.onLoginSuccess, this));
+        request.fail(loginFailed);
+    },
+
+    onLoginSuccess: function(user) {
+        this.store.pushPayload('user', {
+            users: [user]
+        });
+
+        this.modelFor('application').set('profile', this.store.find('user', user.id));
+        this.transitionTo('index');
     }
 });
