@@ -32,13 +32,13 @@ Login:
 
 List of documents with paging and filtering:
 
-![Documents](screenshots/documents.png =608x)
+![Documents](screenshots/documents.png)
 
 Document with markdown-preview and comments:
 
-![Document](screenshots/document-markdown.png =608x)
+![Document](screenshots/document-markdown.png)
 
 List of users:
 
-![Users](screenshots/users.png =608x)
+![Users](screenshots/users.png)
 
