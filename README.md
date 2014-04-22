@@ -6,7 +6,7 @@ Bootstrap/EmberJS/MongoDB demo.
 Libraries:
 
  * Ember, Ember-Data and lodash for client-side application,
- * Ember-QUnit adn testem for unit tests,
+ * Ember-QUnit and testem for unit tests,
  * Bootstrap, Font-Awesome, Bootstrap-Markdown and Ladda for UI,
  * NodeJS, Express, Mongoose and MongoDB for backend.
 
