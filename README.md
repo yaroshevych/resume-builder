@@ -27,7 +27,7 @@ To run tests in browser:
 
 Login:
 
-![Documents](screenshots/login.png =608x)
+![Documents](screenshots/login.png)
 
 
 List of documents with paging and filtering:
