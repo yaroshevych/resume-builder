@@ -5,16 +5,14 @@ var session = require('../middleware/session'),
 module.exports = function(app) {
     app.get('/api/users', session.isAuthenticated, function(req, res) {
         var sendResult = function(records) {
-            for (var i = 0; i < records.length; i++) {
-                records[i].password = null;
-            }
-
             res.json({
                 users: records
             });
         };
 
-        mongoose.models.User.find({}, utils.errorHandler(res, sendResult));
+        mongoose.models.User.find({}, {
+            password: false
+        }, utils.errorHandler(res, sendResult));
     });
 
     app.get('/api/users/:id', session.isAuthenticated, function(req, res) {
@@ -28,11 +26,15 @@ module.exports = function(app) {
             });
         };
 
-        mongoose.models.User.findById(req.params.id, utils.errorHandler(res, sendResult));
+        mongoose.models.User.findById(req.params.id, {
+            password: false
+        }, utils.errorHandler(res, sendResult));
     });
 
     app.post('/api/users', session.isAuthenticated, function(req, res) {
         var sendResult = function(rec) {
+            rec.password = null;
+
             res.json({
                 user: rec
             });
@@ -48,6 +50,8 @@ module.exports = function(app) {
             }
 
             var sendResult = function(rec) {
+                rec.password = null;
+
                 res.json({
                     user: rec
                 });
