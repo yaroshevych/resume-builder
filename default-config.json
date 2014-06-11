@@ -1,0 +1,7 @@
+{
+    "description": "This is default config file for mongo-migrate",
+    "mongoAppDb": {
+        "host": "localhost",
+        "db": "resume-builder"
+    }
+}

@@ -2,13 +2,15 @@
   "name": "resume-builder",
   "version": "0.0.0",
   "dependencies": {
-    "express": "3.4.5",
-    "lodash": "~2.4.1",
-    "passport": "~0.1.17",
-    "passport-local": "~0.1.6",
     "bcrypt": "~0.7.7",
+    "express": "3.4.5",
     "intel": "~0.4.0",
-    "mongoose": "^3.8.8"
+    "lodash": "~2.4.1",
+    "mongo-migrate": "0.0.8",
+    "mongodb": "^1.4.5",
+    "mongoose": "^3.8.8",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6"
   },
   "scripts": {
     "nodemon": "nodemon --debug app.js",

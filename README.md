@@ -13,6 +13,7 @@ Libraries:
 ### Getting started
 
 	npm install
+	node node_modules/mongo-migrate -runmm up # run MongoDB migration scripts
 	bower install
 	grunt test # runs unit tests in terminal
 	grunt build # compiles client-side scripts and styles
