@@ -12,7 +12,7 @@
   },
   "scripts": {
     "nodemon": "nodemon --debug app.js",
-    "nodemon-production": "NODE_ENV=production nodemon --debug app.js",
+    "nodemon-production": "NODE_ENV=production nodemon app.js",
     "debug": "node-inspector"
   },
   "devDependencies": {
