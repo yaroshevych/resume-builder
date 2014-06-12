@@ -3,7 +3,7 @@ var session = require('../middleware/session'),
     utils = require('../utils'),
     sendDocument = function(res) {
         return function(rec) {
-            var data = rec.toJSON();
+            var data = rec.toAliasedFieldsObject();
 
             for (var i = 0; i < data.comments.length; i++) {
                 data.comments[i] = data.comments[i]._id;
@@ -26,10 +26,10 @@ module.exports = function(app) {
                 for (var i = 0; i < records.length; i++) {
                     ids = [];
 
-                    var doc = records[i].toJSON();
+                    var doc = records[i].toAliasedFieldsObject();
 
                     for (var k = 0; k < records[i].comments.length; k++) {
-                        comments.push(doc.comments[k]);
+                        comments.push(new mongoose.models.Comment(doc.comments[k]).toAliasedFieldsObject());
                         ids.push(doc.comments[k]._id + '');
                     }
 
@@ -103,7 +103,7 @@ module.exports = function(app) {
         var updateDoc = function(rec) {
             var sendData = function(doc) {
                 res.json({
-                    comment: rec.comments[rec.comments.length - 1]
+                    comment: new mongoose.models.Comment(rec.comments[rec.comments.length - 1]).toAliasedFieldsObject()
                 });
             };
 
@@ -111,12 +111,12 @@ module.exports = function(app) {
                 return res.json(404);
             }
 
-            rec.comments.push({
+            rec.comments.push(new mongoose.models.Comment({
                 body: req.body.comment.body,
                 authorName: req.user.displayName,
                 author: req.user.id,
                 createdAt: new Date()
-            });
+            }));
 
             rec.save(utils.errorHandler(res, sendData));
         };
