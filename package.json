@@ -1,6 +1,10 @@
 {
   "name": "resume-builder",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaroshevych/resume-builder.git"
+  },
   "dependencies": {
     "bcrypt": "~0.7.7",
     "express": "3.4.5",
