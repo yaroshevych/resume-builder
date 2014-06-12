@@ -2,35 +2,18 @@
 
 var mongoose = require('mongoose'),
     timestamps = require('mongoose-timestamp'),
-    fieldsAliasPlugin = require('mongoose-aliasfield'),
     comment = new mongoose.Schema({
-        b: {
-            type: String,
-            alias: 'body'
-        },
-        an: {
-            type: String,
-            alias: 'authorName'
-        },
-        a: {
+        body: String,
+        authorName: String,
+        author: {
             type: mongoose.Schema.ObjectId,
-            ref: 'User',
-            alias: 'author'
+            ref: 'User'
         },
-        c: {
-            type: Date,
-            alias: 'createdAt'
-        }
+        createdAt: Date
     }),
     schema = new mongoose.Schema({
-        n: {
-            type: String,
-            alias: 'name'
-        },
-        b: {
-            type: String,
-            alias: 'body'
-        },
+        name: String,
+        body: String,
         authorName: String,
         author: {
             type: mongoose.Schema.ObjectId,
@@ -40,10 +23,4 @@ var mongoose = require('mongoose'),
     });
 
 schema.plugin(timestamps);
-comment.plugin(fieldsAliasPlugin);
-schema.plugin(fieldsAliasPlugin);
-
-module.exports = function(app) {
-    mongoose.model('Comment', comment)(app);
-    mongoose.model('Document', schema)(app);
-};
+module.exports = mongoose.model('Document', schema);

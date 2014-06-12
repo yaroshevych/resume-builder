@@ -13,7 +13,6 @@
     "mongo-migrate": "0.0.8",
     "mongodb": "^1.4.5",
     "mongoose": "^3.8.8",
-    "mongoose-aliasfield": "0.0.3",
     "passport": "~0.1.17",
     "passport-local": "~0.1.6"
   },
