@@ -83,6 +83,10 @@ module.exports = function(app) {
                 return res.send(404);
             }
 
+            if (rec.updatedAt.getTime() !== Date.parse(req.body.document.updatedAt)) {
+                return res.send(409);
+            }
+
             delete req.body.document.comments;
             rec.set(req.body.document);
             rec.save(utils.errorHandler(res, sendDocument(res)));
@@ -102,8 +106,17 @@ module.exports = function(app) {
     app.post('/api/documents/:id/comments', session.isAuthenticated, function(req, res) {
         var updateDoc = function(rec) {
             var sendData = function(doc) {
+                var data = doc.toJSON(),
+                    comment = rec.comments[rec.comments.length - 1];
+
+                for (var i = 0; i < data.comments.length; i++) {
+                    data.comments[i] = data.comments[i]._id;
+                }
+
                 res.json({
-                    comment: rec.comments[rec.comments.length - 1]
+                    comment: comment,
+                    comments: [comment],
+                    documents: [data]
                 });
             };
 
@@ -131,7 +144,17 @@ module.exports = function(app) {
             }
 
             rec.comments.id(req.params.commentId).remove();
-            rec.save(utils.errorHandler(res, sendDocument(res)));
+            rec.save(utils.errorHandler(res, function(rec) {
+                var data = rec.toJSON();
+
+                for (var i = 0; i < data.comments.length; i++) {
+                    data.comments[i] = data.comments[i]._id;
+                }
+
+                res.json({
+                    documents: [data]
+                });
+            }));
         };
 
         mongoose.models.Document.findById(req.params.id, utils.errorHandler(res, updateDoc));

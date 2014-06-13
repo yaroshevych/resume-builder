@@ -17,7 +17,6 @@ App.DocumentCommentController = Ember.ObjectController.extend({
 
     hideSaveLoading: function() {
         this.set('isSaving', false);
-        this.get('controllers.document.content.comments').pushObject(this.get('content'));
         this.transitionToRoute('document');
     },
 
