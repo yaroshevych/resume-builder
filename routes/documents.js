@@ -80,7 +80,7 @@ module.exports = function(app) {
     app.put('/api/documents/:id', session.isAuthenticated, function(req, res) {
         var updateDoc = function(rec) {
             if (!rec) {
-                return res.json(404);
+                return res.send(404);
             }
 
             delete req.body.document.comments;
