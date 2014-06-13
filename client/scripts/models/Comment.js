@@ -1,7 +1,7 @@
 App.Comment = DS.Model.extend({
     body: DS.attr('string'),
     authorName: DS.attr('string'),
-    createdAt: DS.attr('date'),
+    createdAt: DS.attr('isodate'),
     author: DS.belongsTo('user'),
     documentId: '' // CHECK THAT THIS IS CORRECT
 });
