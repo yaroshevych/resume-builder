@@ -3,9 +3,13 @@
         {{view Ember.TextField valueBinding="nameFilter" class="documents-filter-field form-control" placeholder="Filter documents by name" }}
 
         <div class="list-group">
-            {{#each controller.content}}
-                {{#link-to 'document' this class="list-group-item"}}{{name}}{{/link-to}}
-            {{/each}}
+            <div class="documents-list">
+                {{#each controller.content}}
+                    {{#link-to 'document' this class="list-group-item"}}{{name}}{{/link-to}}
+                {{/each}}
+
+                <div class="file-hover-message"><i class="fa fa-cloud-upload"></i></div>
+            </div>
 
             <div id="documents-pager"></div>
         </div>

@@ -5,6 +5,8 @@ App.DocumentsView = Ember.View.extend({
         this.updatePagination();
 
         $('.documents-filter-field').val(this.get('controller.content.query.name'));
+
+        this.createDropZone();
     },
 
     updatePagination: function() {
@@ -27,5 +29,31 @@ App.DocumentsView = Ember.View.extend({
         clearTimeout(this.paginationUpdateTimerId);
 
         this.paginationUpdateTimerId = setTimeout(_.bind(this.updatePagination, this), 200);
-    }.observes('controller.content')
+    }.observes('controller.content'),
+
+    createDropZone: function() {
+        var el = $('.documents-list'),
+            dragLeaveTimer = null;
+
+        el.on('dragover', function(evt) {
+            clearTimeout(dragLeaveTimer);
+            el.addClass('file-hover');
+            evt.dataTransfer.dropEffect = 'copy';
+            return false;
+        });
+
+        el.on('dragleave', function() {
+            dragLeaveTimer = setTimeout(function() {
+                el.removeClass('file-hover');
+            }, 500);
+
+            return false;
+        });
+
+        el.on('drop', _.bind(function(e) {
+            el.removeClass('file-hover');
+            e.preventDefault();
+            this.get('controller').send('upload', e.dataTransfer.files);
+        }, this));
+    }
 });

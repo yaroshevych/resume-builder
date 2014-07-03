@@ -1,4 +1,6 @@
 var session = require('../middleware/session'),
+    fs = require('fs'),
+    path = require('path'),
     mongoose = require('mongoose'),
     utils = require('../utils'),
     sendDocument = function(res) {
@@ -65,7 +67,7 @@ module.exports = function(app) {
 
             mongoose.models.Document.find(options, null, {
                 sort: {
-                    createdAt: 1
+                    createdAt: -1
                 },
                 skip: +req.query.offset || 0,
                 limit: +req.query.limit || 1000
@@ -158,5 +160,42 @@ module.exports = function(app) {
         };
 
         mongoose.models.Document.findById(req.params.id, utils.errorHandler(res, updateDoc));
+    });
+
+    app.post('/api/documents/upload', session.isAuthenticated, function(req, res) {
+        var docName = req.files.doc.name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+        if (!docName) {
+            return res.json(400);
+        }
+
+        mongoose.models.Document.create({
+                name: docName,
+                body: docName,
+                authorName: req.user.displayName,
+                author: req.user._id
+            },
+            utils.errorHandler(res, function(rec) {
+                fs.readFile(req.files.doc.path, function(err, data) {
+                    var dir = path.normalize(path.join(__dirname, '..', 'uploads')),
+                        newPath = path.join(dir, rec._id + '-' + docName);
+
+                    console.log('Path ' + newPath);
+
+                    fs.writeFile(newPath, data, function(err) {
+                        if (err) {
+                            console.log(err);
+                            return;
+                        }
+
+                        console.log('OK ' + docName);
+
+                        res.send({
+                            doc: rec.toJSON()
+                        });
+                    });
+                });
+            }));
+
     });
 };
