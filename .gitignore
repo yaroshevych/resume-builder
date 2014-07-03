@@ -33,3 +33,4 @@ client/styles/main.css.map
 *.sublime*
 
 app.log*
+uploads
