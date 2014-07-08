@@ -2,51 +2,17 @@
 
 var useCluster = process.env.NODE_ENV === 'production',
     isWorker = true,
-    intel = require('intel'),
+    winston = require('winston'),
     mongoose = require('mongoose'),
-    initIntel = function() {
-        intel.config({
-            formatters: {
-                'simple': {
-                    'format': '[%(levelname)s] %(message)s',
-                    'colorize': true
-                },
-                'details': {
-                    'format': '[%(date)s] %(name)s.%(levelname)s: %(message)s',
-                    'datefmt': '%Y-%m-%d %H:%M-%S.%L'
-                }
-            },
-            handlers: {
-                'terminal': {
-                    'class': intel.handlers.Console,
-                    'formatter': 'simple',
-                    'level': intel.VERBOSE
-                },
-                'logfile': {
-                    'class': intel.handlers.Rotating,
-                    'level': intel.DEBUG,
-                    maxSize: 1000000,
-                    maxFiles: 10,
-                    'file': 'logs/app.log',
-                    'formatter': 'details'
-                }
-            },
-            loggers: {
-                'root': {
-                    'handlers': ['logfile', 'terminal'],
-                    'level': 'VERBOSE',
-                    'handleExceptions': true,
-                    'exitOnError': false,
-                    'propagate': false
-                },
-                'root.node_modules.express': { // huh what? see below :)
-                    'handlers': ['terminal'],
-                    'level': 'VERBOSE'
-                }
-            }
-        });
+    initLogger = function() {
+        // TODO: log rotation
+        winston.add(winston.transports.File, { filename: 'logs/appw.log', level: 'debug' });
+        require('winston-papertrail');
 
-        intel.console();
+        winston.add(winston.transports.Papertrail, {
+            host: 'logs.papertrailapp.com',
+            port: 12345
+        });
     },
     initExpress = function() {
         var express = require('express'),
@@ -77,7 +43,7 @@ var useCluster = process.env.NODE_ENV === 'production',
                 maxAge: 0
             }));
 
-            intel.info('Adding latency to simulate real-life connection...');
+            winston.info('Adding latency to simulate real-life connection...');
             app.use(function(req, res, next) {
                 setTimeout(next, 50);
             });
@@ -93,10 +59,10 @@ var useCluster = process.env.NODE_ENV === 'production',
         app.use(passport.session());
 
         app.use(function(req, res, next) {
-            intel.debug('+ %s %s', req.method, req.url);
+            winston.debug('+ %s %s', req.method, req.url);
 
             req.on('end', function() {
-                intel.debug('- %s %s', req.method, req.url);
+                winston.debug('- %s %s', req.method, req.url);
             });
 
             next();
@@ -112,7 +78,7 @@ var useCluster = process.env.NODE_ENV === 'production',
         });
 
         app.listen(process.env.PORT || port);
-        intel.info('Express started on port ' + port + ', environment: ' + process.env.NODE_ENV + ', process: ' + process.pid);
+        winston.info('Express started on port ' + port + ', environment: ' + process.env.NODE_ENV + ', process: ' + process.pid);
 
     },
     initMongoose = function() {
@@ -120,7 +86,7 @@ var useCluster = process.env.NODE_ENV === 'production',
 
         if (process.env.NODE_ENV !== 'production') {
             mongoose.set('debug', function(collectionName, method, query, doc, opt) {
-                intel.debug('%s %s %s %s $s', collectionName, method, JSON.stringify(query), JSON.stringify(doc), opt);
+                winston.debug('%s %s %s %s $s', collectionName, method, JSON.stringify(query), JSON.stringify(doc), opt);
             });
         }
 
@@ -156,7 +122,7 @@ if (useCluster) {
 }
 
 if (isWorker) {
-    initIntel();
+    initLogger();
     initExpress();
     initMongoose();
 }
